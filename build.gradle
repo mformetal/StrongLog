@@ -1,0 +1,19 @@
+allprojects {
+    buildscript {
+        ext.kotlin_version = '1.2.41'
+
+        repositories {
+            google()
+            jcenter()
+            mavenCentral()
+            maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+        }
+
+        dependencies {
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+            classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.8"
+            classpath 'com.android.tools.build:gradle:3.1.2'
+            classpath 'com.google.gms:google-services:3.2.0'
+        }
+    }
+}

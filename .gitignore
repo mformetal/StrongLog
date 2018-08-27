@@ -1,0 +1,24 @@
+.gradle
+.idea
+build
+*.iml
+local.properties
+ios/KotlinHello.framework
+ios/KotlinHello.kt.bc
+google-services.json
+GoogleService-Info.plist
+
+.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.xcworkspace/
+project.xcworkspace/
+xcuserdata/
+
+# Podfiles
+Pods/

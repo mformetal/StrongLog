@@ -1,0 +1,22 @@
+apply plugin: 'konan'
+
+konan.targets += ['android_arm32', 'android_arm64', 'iphone']
+
+konanArtifacts {
+    interop('libcurl') {
+        target('android_arm32') {
+            includeDirs "libs/curl/include/"
+        }
+        target('android_arm64') {
+            includeDirs "libs/curl/include/"
+        }
+    }
+
+    library('kurl') {
+        srcDir 'src/main/kotlin'
+
+        libraries {
+            artifact 'libcurl'
+        }
+    }
+}
