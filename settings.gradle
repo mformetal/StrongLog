@@ -1,4 +1,3 @@
 rootProject.name = 'native-moddly'
 include ':common'
-include ':kurl'
 include ':android'
