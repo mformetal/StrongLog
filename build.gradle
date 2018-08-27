@@ -1,4 +1,6 @@
 ext.kotlin_version = '1.2.60'
+ext.serialization_version = '0.6.1'
+ext.coroutines_version = '0.25.0'
 
 allprojects {
     buildscript {
@@ -6,12 +8,23 @@ allprojects {
             google()
             jcenter()
             mavenCentral()
+            maven { url "https://kotlin.bintray.com/kotlinx" }
         }
 
         dependencies {
             classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+            classpath "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:$serialization_version"
+
             classpath 'com.android.tools.build:gradle:3.1.4'
+
             classpath 'com.google.gms:google-services:3.2.0'
         }
+    }
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://kotlin.bintray.com/kotlinx" }
     }
 }
