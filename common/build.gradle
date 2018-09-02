@@ -1,13 +1,20 @@
 apply plugin: 'kotlin-platform-common'
 apply plugin: 'kotlinx-serialization'
 
+repositories {
+    maven { url 'https://kotlin.bintray.com/kotlinx' }
+    maven { url 'https://dl.bintray.com/kotlin/ktor' }
+
+    jcenter()
+}
+
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
-    compile "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
-    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
 
-    compile "khttp:khttp:0.1.0"
+    implementation 'io.ktor:ktor-client:0.9.4'
 
-    testCompile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
 }
