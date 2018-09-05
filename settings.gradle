@@ -1,3 +1,5 @@
 rootProject.name = 'native-moddly'
 include ':common'
 include ':android'
+include ':backend'
+
