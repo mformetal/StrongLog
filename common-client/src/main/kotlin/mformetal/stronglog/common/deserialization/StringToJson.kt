@@ -1,4 +1,4 @@
-package mformetal.moddly.common.deserialization
+package mformetal.stronglog.common.deserialization
 
 import kotlinx.serialization.json.JSON
 

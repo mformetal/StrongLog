@@ -1,0 +1,14 @@
+apply plugin: 'kotlin-platform-common'
+apply plugin: 'kotlinx-serialization'
+
+repositories {
+    maven { url 'https://kotlin.bintray.com/kotlinx' }
+    maven { url 'https://dl.bintray.com/kotlin/ktor' }
+
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
+}

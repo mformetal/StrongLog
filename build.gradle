@@ -1,4 +1,4 @@
-ext.kotlin_version = '1.2.60'
+ext.kotlin_version = '1.2.61'
 ext.serialization_version = '0.6.1'
 ext.coroutines_version = '0.25.0'
 ext.ktor_version = '0.9.4'
