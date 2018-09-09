@@ -1,35 +1,46 @@
-import com.squareup.moshi.Json
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.Types
+import com.google.gson.JsonElement
+import com.google.gson.JsonObject
 import org.jsoup.Jsoup
+import org.jsoup.nodes.Document
+import org.jsoup.nodes.Element
 import java.io.File
 
 class Scraper {
 
-    private val moshi = Moshi.Builder().build()
-    private val charset = "UTF-8"
-
     val root : File
         get() = (javaClass.classLoader.getResource("exrx.net").file).toFile()
 
-    class Workout(val title: String)
-
-    fun scrape() {
-        root.subfile("WeightExercises")
+    fun scrape(isDebug : Boolean = false) : List<String> {
+        return root.subfile("WeightExercises")
                 .listFiles()
                 .flatMap { it.listFiles().toList() }
-                .map {
-                    val document = Jsoup.parse(it, "UTF-8")
-
-                    Workout(title = document.title())
-                }
+                .map { Jsoup.parse(it, "UTF-8").toWorkout() }
                 .toList()
-                .run {
-                    val type = Types.newParameterizedType(List::class.java, Workout::class.java)
-                    val adapter = moshi.adapter<List<Workout>>(type)
-                    val json = adapter.toJson(this)
-                    println(json)
+                .map { it.toString() }
+                .also {
+                    if (isDebug) {
+                        println(it)
+                    }
                 }
+    }
+
+    private fun Document.toWorkout() : JsonElement {
+        val document = this
+        return JsonObject().apply {
+            addProperty("title", document.title().split(":").last().trim())
+            add("muscles", JsonObject().apply {
+                val href = document.selectFirst("link[href~=^https?:\\/\\/exrx.net\\/WeightExercises]").attr("href")
+                val primaryMuscle = href.split("/")[4].split(Regex("(?=\\p{Upper})")).first()
+                addProperty("primary", primaryMuscle)
+            })
+            add("classification", JsonObject().apply {
+                val classification = document.getElementsContainingOwnText("Classification")
+                if (!classification.isEmpty()) {
+                    addProperty("force", (document.getElementsContainingOwnText("Force:").parents()[1].childNode(3) as Element).text())
+                    addProperty("mechanics", (document.getElementsContainingOwnText("Mechanics:").parents()[1].childNode(3) as Element).text())
+                }
+            })
+        }
     }
 
     private fun String.toFile() = File(this)

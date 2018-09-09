@@ -8,11 +8,9 @@ repositories {
 }
 
 dependencies {
-    implementation project(':common-models')
-
     implementation 'org.jsoup:jsoup:1.11.3'
 
-    implementation "com.squareup.moshi:moshi:$moshi_version"
+    implementation 'com.google.code.gson:gson:2.8.5'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
