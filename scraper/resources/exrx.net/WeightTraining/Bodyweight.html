@@ -1,0 +1,1210 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>ExRx.net : Calculating Actual Resistance</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Incorporating Percentage Bodyweight into Weight Training Workloads" />
+<meta name="generator" content="concrete5 - 8.3.2" />
+<link rel="shortcut icon" href="https://exrx.net/application/files/8014/4923/2704/Runner3.jpg" type="image/x-icon" />
+<link rel="icon" href="https://exrx.net/application/files/8014/4923/2704/Runner3.jpg" type="image/x-icon" />
+<link rel="canonical" href="https://exrx.net/WeightTraining/Bodyweight">
+<script type="text/javascript">
+    var CCM_DISPATCHER_FILENAME = "/index.php";
+    var CCM_CID = 2779;
+    var CCM_EDIT_MODE = false;
+    var CCM_ARRANGE_MODE = false;
+    var CCM_IMAGE_PATH = "/updates/concrete5-8.3.2/concrete/images";
+    var CCM_TOOLS_PATH = "/index.php/tools/required";
+    var CCM_APPLICATION_URL = "https://exrx.net";
+    var CCM_REL = "";
+    var CCM_ACTIVE_LOCALE = "en_US";
+</script>
+<style type="text/css" data-area-style-area-handle="Main" data-block-style-block-id="79715" data-style-set="3471">.ccm-custom-style-container.ccm-custom-style-main-79715{padding-top:10px;padding-bottom:13px}</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="/updates/concrete5-8.3.2/concrete/js/ie/html5-shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="/updates/concrete5-8.3.2/concrete/js/ie/respond.js"></script><![endif]-->
+<link href="/updates/concrete5-8.3.2/concrete/blocks/page_list/view.css" rel="stylesheet" type="text/css" media="all">
+
+<script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ 	 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ 	 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ 			 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-19549167-1', 'auto');
+	  ga('send', 'pageview');
+    </script>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+   $('.ccm-responsive-navigation.original ul li').has('ul').one("touchstart", function(e) {
+      $(this).one('click', function(e) {
+         e.preventDefault();
+      });
+   });
+});
+</script> <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900' rel='stylesheet' type='text/css'>
+<link href="/application/files/cache/css/fruitful/iGotStyle.css?ts=1535840067" rel="stylesheet" type="text/css" media="all">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no">
+
+<link href="/application/files/cache/css/fruitful/accessory.css?ts=1535840067" rel="stylesheet" type="text/css" media="all"> 
+<script src="https://use.fontawesome.com/bf47fdcc0a.js"></script>
+<style type="text/css">  
+.fa_custom {  
+color: #0099CC;  
+}  
+</style>
+</head>
+<body id="page2779">
+<div class="ccm-page page-type-page page-template-right-sidebar">
+<header id="siteHeader">
+
+<div class="container">
+<div class="row">
+<div id="logo" class="col-xs-6 col-md-3">
+<div class="ccm-custom-style-container ccm-custom-style-main-79715">
+<a href="https://exrx.net/"><img src="/application/files/3114/3635/4565/logo_same_proportion_5_2_2015.gif" alt="ExRx.net: Exercise Prescription on Internet" class="ccm-image-block img-responsive bID-79715"></a>
+</div>
+</div>
+ <nav id="mainNav" class="clearfix hidden-xs hidden-sm col-sm-9">
+<ul class="nav"><li class=""><a href="/Lists/Directory" target="_self" class="">Tools</a><ul><li class=""><a href="/Lists/Directory" target="_self" class="">Exercise Library</a></li><li class=""><a href="/WeightTraining/Instructions" target="_self" class="">Workout Templates</a></li><li class=""><a href="/Lists/Muscle" target="_self" class="">Muscle Directory</a></li><li class=""><a href="/Lists/Articulations" target="_self" class="">Joint Articulations</a></li><li class=""><a href="/Calculators" target="_self" class="">Fitness Calculators</a></li></ul></li><li class=""><a href="/Beginning" target="_self" class="">Topics</a><ul><li class=""><a href="/Beginning" target="_self" class="">Beginning Exercise</a></li><li class=""><a href="/WeightTraining" target="_self" class="">Weight Training</a></li><li class=""><a href="/Kinesiology" target="_self" class="">Kinesiology</a></li><li class=""><a href="/Aerobic" target="_self" class="">Aerobic Conditioning</a></li><li class=""><a href="/ExInfo" target="_self" class="">Exercise Information</a></li><li class=""><a href="/Sports" target="_self" class="">Sports Conditioning</a></li><li class=""><a href="/Bodybuilding" target="_self" class="">Bodybuilding</a></li><li class=""><a href="/Drugs" target="_self" class="">Pharmacology</a></li><li class=""><a href="/Psychology" target="_self" class="">Psychology</a></li><li class=""><a href="/FatLoss" target="_self" class="">Weight Management</a></li><li class=""><a href="/Nutrition" target="_self" class="">Diet &amp; Nutrition</a></li><li class=""><a href="/Testing" target="_self" class="">Fitness Testing</a></li></ul></li><li class=""><a href="/Notes/SiteJournal" target="_self" class="">More</a><ul><li class=""><a href="/Notes/SiteJournal" target="_self" class="">Site Updates</a></li><li class=""><a href="/People/Contact" target="_self" class="">About Us</a></li><li class=""><a href="/Notes/Feedback" target="_self" class="">Testimonies</a></li><li class=""><a href="/Notes/Archive/Feedback1" target="_self" class="">Feedback</a></li><li class=""><a href="/Questions" target="_self" class="">Question &amp; Answer</a></li><li class=""><a href="/forum/" target="_blank" class="">Forum</a></li><li class=""><a href="/Links" target="_self" class="">Links</a></li><li class=""><a href="/Abstracts" target="_self" class="">Abstracts</a></li><li class=""><a href="/Journals" target="_self" class="">Journals</a></li><li class=""><a href="/Videos" target="_self" class="">Videos</a></li><li class=""><a href="/Talks" target="_self" class="">Expert Talks</a></li><li class=""><a href="/Notes/Donations" target="_self" class="">Donate</a></li></ul></li><li class=""><a href="/Store" target="_self" class="">Stores</a><ul><li class=""><a href="/Store" target="_self" class="">ExRx.net Store</a></li><li class=""><a href="/AmazonStore" target="_self" class="">Amazon Store</a></li></ul></li></ul>
+</nav>
+<div id="mobileAssets" class="col-xs-6 visible-xs-block visible-sm-block text-right">
+<div id="icoMobileNav"><i class="fa fa-bars"></i></div>
+</div>
+</div>
+</div>
+</header>
+<style>
+@media (min-width: 768px) {
+ #mainShell .col-sm-3 {
+ width: 27.50%;
+}
+ #mainShell .subfooter [class*='col-sm-'] {
+ padding-left:10px !important;
+ padding-right:10px !important;
+}
+ #mainShell .col-sm-9 {
+ width: 72%;
+}
+}
+ @media only screen and (max-width:1200px) and (min-width:992px) {
+ #mainShell .col-sm-3 {
+ width:330px !important;
+}
+ #mainShell .subfooter .col-sm-3 {
+ width: 25% !important;
+ padding-left:10px !important;
+ padding-right:10px !important;
+}
+ #mainShell .subfooter [class*='col-sm-'] {
+ padding-left:10px !important;
+ padding-right:10px !important;
+}
+ #mainShell .col-sm-9 {
+ width:660px !important;
+}
+}
+ @media (max-width:991px) and (min-width:768px) {
+ #mainShell .col-sm-3 {
+ width:330px !important;
+}
+ #mainShell .col-sm-9 {
+ width:428px !important;
+}
+ #mainShell .col-sm-9 [class*='col-sm-'] {
+ width: 100%;
+}
+ #mainShell .subfooter .col-sm-3 {
+width: 50% !important;
+}
+ #mainShell .subfooter .col-sm-2 {
+width: 33.33% !important;
+float:left;
+}
+ #mainShell .subfooter [class*='col-sm-'] {
+padding-left:10px !important;
+padding-right:10px !important;
+}
+}
+ @media only screen and (max-width:768px) {
+ div.ccm-layout-column {
+ width: 100% !important;
+}
+ #mainShell .subfooter .col-sm-3 {
+ width: 25% !important;
+ float:left;
+}
+ #mainShell .subfooter .col-sm-2 {
+ width: 33.33% !important;
+ float:left;
+}
+}
+ #mainShell .subfooter [class*='col-sm-'] {
+ padding-left:10px !important;
+ padding-right:10px !important;
+}
+ @media only screen and (max-width:600px) {
+ #mainShell .subfooter .col-sm-3 {
+ width: 50% !important;
+ float:left;
+}
+ #mainShell .subfooter .col-sm-2 {
+ width: 50% !important;
+ float:left;
+}
+ #mainShell .subfooter [class*='col-sm-'] {
+ padding-left:10px !important;
+ padding-right:10px !important;
+}
+}
+ @media only screen and (max-width:480px) {
+ #mainShell .subfooter .col-sm-3 {
+ width: 50% !important;
+ float:left;
+}
+ #mainShell .subfooter .col-sm-2 {
+ width: 50% !important;
+ float:left;
+}
+ #mainShell .subfooter [class*='col-sm-'] {
+ padding-left:5px !important;
+ padding-right:5px !important;
+}
+}
+ @media (max-width: 320px) {
+ #headerShell .col-sm-12 {
+ padding-left:10px !important;
+ padding-right:10px !important;
+}
+ #mainShell .col-sm-9 [class*='col-sm-']:not(.col-sm-2) {
+ padding-left: 15px !important;
+ padding-right: 15px !important;
+}
+ #mainShell .subfooter .col-sm-3 {
+ width: 50% !important;
+ float:left;
+}
+ #mainShell .subfooter .col-sm-2 {
+ width: 50% !important;
+ float:left;
+}
+ #mainShell .subfooter [class*='col-sm-'] {
+ padding-left:5px !important;
+ padding-right:5px !important;
+}
+#mainShell img{
+    display:block !important;
+}
+}
+#google_translate_element img {
+        display: inline-block !important;
+    }
+    #google_translate_element a {
+        text-decoration: none;
+    }
+</style>
+<div id="headerShell">
+<div class="container"><div class="row"><div class="col-sm-12"> <div class="fruitful-page-title" style="padding:0px 0px; margin-top:15px !important;">
+<h1 class="page-title">Calculating Actual Resistance</h1>
+<h3>Incorporating Percentage Bodyweight into Weight Training Workloads</h3>
+</div>
+</div></div></div></div>
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+</div>
+</div>
+</div>
+<div class="row Breadcrumb-Container Add-Margin-Top">
+<div class="container">
+<div class="col-sm-9">
+<p><a href="http://exrx.net">ExRx.net</a> &gt; <a href="../WeightTraining">Weight Training</a> &gt; Calculations</p>
+</div>
+<div class="col-sm-3">
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bg,bs,cs,da,de,el,en,es,fa,fi,fr,hi,hr,ht,hu,id,it,iw,ja,ko,ku,lt,lv,mn,my,ne,nl,no,pl,pt,ro,ru,sk,sl,sv,th,tl,tr,uk,vi,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-19549167-1'}, 'google_translate_element');
+				}
+				(function() {
+					var googleTranslateScript = document.createElement('script');
+					googleTranslateScript.type = 'text/javascript';
+					googleTranslateScript.async = true;
+					googleTranslateScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+					( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( googleTranslateScript );
+				})();
+			</script>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+</div>
+</div>
+</div>
+<div id="mainShell" class="container">
+<div class="row">
+<main class="col-sm-9 Add-Margin-Bottom">
+<article>
+<div class="">
+<div class="ccm-custom-style-container ccm-custom-style-main-30658 Add-Margin-Bottom">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle sub-directory-responsive " style="display:block" data-ad-client="ca-pub-6329449765532083" data-ad-slot="3609089218"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+</article>
+<article>
+<div class="row"><div class="col-sm-4">
+<ul> <li><a href="#RepWorkloads">Rep Workload</a> </li><li><a href="#%1RMWorkloads">% 1RM Workload</a> </li><li><a href="#MachineAssisted">Machine Assisted</a> </li><li><a href="#%BWExercises">% BW Exercises</a> </li><li><a href="#Calculating1RM">Calculating 1RM</a> </li><li><a href="#Estimating1RM">Estimating 1RM</a> </li></ul>
+</div><div class="col-sm-4">
+<ul> <li><a href="#AdjustingBWExercises">Adjusting BW Exercises</a> </li><li><a href="#AlignedExercises">Aligned Exercises</a> </li><li><a href="#NonalignedExercises">Non-aligned Exercises</a> <ul> <li><a href="#NonalignedAlgorithm">Algorithm</a> </li><li><a href="#NonalignedExamples">Examples</a> </li><li><a href="#SpecialCases">Special Cases</a> </li></ul> </li></ul>
+</div><div class="col-sm-4">
+<ul> <li><a href="#AmbiguousExercises">Ambiguous Exercises</a> </li><li><a href="#InsignificantSegments">Insignificant Segments</a> </li><li><a href="#anchor852827">Olympic-style Weightlifts</a> </li><li><a href="#Machines">Machines</a> </li><li><a href="#ForceAnalysis">Force Analysis</a> </li><li><a href="#Quiz">Quiz</a> </li><li><a href="#1RMReferences">References</a> </li></ul>
+</div></div>
+<p>Workload prescriptions for progressive resistance training may be used to calculate:
+</p><ul>
+<li>weight increases
+<ul>
+<li>eg: increase of 5% after achievement of 12 reps </li>
+</ul></li>
+<li>warm-up resistances
+<ul>
+<li>eg: 50% of workout resistance </li>
+</ul></li>
+<li>workloads based on a percentage of one rep max
+<ul>
+<li>eg: 80% 1RM </li>
+</ul></li>
+</ul><p>Calculating the actual resistance of an exercise is important, regardless if the workloads are based on the number of reps you can perform with a weight (eg: 8-12 reps) or your one rep max.
+</p><h3><a name="RepWorkloads"></a>Repetition Range Based Workloads</h3><p>With workloads based on a repetition range, once the upper repetition range is reached, the resistance is increased, typically 2.5% to 10%.
+</p><p>For example, let's calculate a weight increase of 5% once 12 reps are achieved:
+</p><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/Gastrocnemius/DBSingleLegCalfRaise"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/4715/1750/2881/DumbbellSingleLegCalfRaiseSmall.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/4715/1750/2881/DumbbellSingleLegCalfRaiseSmall.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/4715/1750/2881/DumbbellSingleLegCalfRaiseSmall.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/4715/1750/2881/DumbbellSingleLegCalfRaiseSmall.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/4715/1750/2881/DumbbellSingleLegCalfRaiseSmall.jpg" alt="Dumbbell Single Leg Calf Raise" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" width="240" height="320" class="redactor-selected-image" style="float: right; margin: 0px 0px 10px 10px;"></picture></a>
+</p><p><strong><a href="../WeightExercises/DeltoidAnterior/BBShoulderPress">Shoulder Press</a></strong><br> Weight to achieve 8-12 reps = 100 lbs<br> New Weight = 105 lbs
+</p><p>Once we know the workout weight, we can also quickly calculate a warm-up set resistance using 50% of the workout weight.
+</p><p>Now, what happens when we perform an exercise that utilizes bodyweight, in addition to added weight? Since the bodyweight contributes to a significant portion of the actual resistance, we must account for it by calculating the actual resistance:
+</p><p><a href="../WeightExercises/Gastrocnemius/DBSingleLegCalfRaise"><strong>Dumbbell Single Leg Calf Raise</strong></a><br> Weight to achieve 8-12 reps = 10 lbs Dumbbell <br> Actual Resistance = 10 lbs dumbbell + 200 lbs Bodyweight = 210 lbs<br> New Actual Resistance = 220 lbs<br> New Dumbbell Weight = 220 lbs (New Actual Resistance) - 200 (Bodyweight) = 20 lbs
+</p><p>So, 20 lbs will be the new weight of the dumbbell once 12 reps are achieved with the 10 lbs dumbbell. Going from a 10 lbs dumbbell to a 20 lbs dumbbell may seem as though our resistance increased by 100% if we did not understand the need to base the weight increase off of the actual resistance rather than only the weight of the dumbbell. If we would have not accounted for bodyweight, the new dumbbell weight would have been erroneously calculated to be no more than 11 lbs, far too light for a new resistance. So we calculate ~5% of the Actual Resistance, which includes the bodyweight. Then we found the weight of the new dumbbell by subtracting out the weight of the body from the newly calculated Actual Resistance.
+</p><p>To calculate a 50% warm-up resistance, we take the bodyweight minus half of the New Actual Resistance to arrive at negative number which signifies an assisted weight. However, since there is no such machine as Assisted Single Calf Raise Machine, we instead perform a <a href="../WeightExercises/Gastrocnemius/BWStandingCalfRaise">Bodyweight</a> or <a href="../WeightExercises/Gastrocnemius/DBStandingCalfRaise">Dumbbell Standing Calf Raise</a> with both legs
+</p><h3><a name="%1RMWorkloads"></a>Percentage of One Repetition Maximum Workloads</h3><p>Many sports conditioning workouts are based on a percentage of <a href="../Calculators/OneRepMax">One Rep Max</a>, particularly heavy lifts such as <a href="../WeightExercises/OlympicLifts/PowerClean">Power Cleans</a>, <a href="../WeightExercises/PectoralSternal/BBBenchPressPowerLift">Bench Press</a>, <a href="../WeightExercises/GluteusMaximus/BBSquat">Squat</a>, and <a href="../WeightExercises/GluteusMaximus/BBDeadlift">Deadlift</a>.
+</p><p>For example, normally we would have this scenario:
+</p><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/LatissimusDorsi/WtPullup"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/4915/1965/2679/WeigthedPullup.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/4915/1965/2679/WeigthedPullup.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/4915/1965/2679/WeigthedPullup.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/4915/1965/2679/WeigthedPullup.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/4915/1965/2679/WeigthedPullup.jpg" alt="Weighted Pullup" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" width="240" height="320" class="redactor-selected-image" style="float: right; margin: 0px 0px 10px 10px;"></picture></a>
+</p><p><strong><a href="../WeightExercises/PectoralSternal/BBBenchPress">Bench Press</a></strong><br> 1 RM = 200 lbs<br> 80% 1 RM = 160 lbs
+</p><p>Warm-up weight can simply be calculated by taking 50% of workout weight. In this case 80 lbs.
+</p><p>Now, let's look at an exercise that utilizes bodyweight, in addition to added weight in the form of a dumbbell between ankles or hanging from a dip belt around waist. To calculate 80% 1RM we must know Bodyweight:
+</p><p><a href="../WeightExercises/LatissimusDorsi/WtPullup"><strong>Weighted Pullup</strong></a><br> 1 RM = 50 lbs (dumbbell)<br> Bodyweight = 200 lbs<br> 1RM (Actual Resistance) = 200 + 50 = 250 lbs<br> 80% 1RM (Actual Resistance) = 200 lbs <br> Dumbbell weight = 80% 1RM - Bodyweight = 0 lb
+</p><p>Since the workload is the same as the bodyweight, no additional resistance is required. If the New Actual Resistance were to exceed the Bodyweight, the new added weight can be calculated by subtracting the bodyweight from the Actual Resistance required. If the Bodyweight exceeded the New Actual Resistance, an <a href="../WeightExercises/LatissimusDorsi/AsPullupOpenKneeling">Assisted Pull-up Machine</a> can be used.
+</p><p>In the example workload above, 50% of the workout resistance would call for half of the bodyweight, meaning, an assisted weighted Chin-up with 100 lbs (subtracted from the bodyweight) would be performed as a warm-up resistance. The same calculations can be applied to exercises like weighted pull-ups or dips.
+</p><h3><a name="MachineAssisted"></a>Machine Assisted Exercises</h3><p>On machine assisted exercise, the weight placed on the machine subtracts weight from the user's bodyweight, so the actual weight is the body weight minus the weight selected on the machine. To calculate a warm-up and a subsequent weight increase from the Actual Resistance.
+</p><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/PectoralSternal/AsChestDipKneeling"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/2615/1749/3540/AssistedChestDips.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/2615/1749/3540/AssistedChestDips.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/2615/1749/3540/AssistedChestDips.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/2615/1749/3540/AssistedChestDips.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/2615/1749/3540/AssistedChestDips.jpg" alt="Assisted Dip" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" width="240" height="320" style="float: right; margin: 0px 0px 10px 10px;"></picture></a>
+</p><p><b><a href="https://exrx.net/WeightExercises/PectoralSternal/AsChestDipKneeling">Machine Assisted Dip</a><strong> </strong></b></p><p><b><strong></strong></b>Assisted weight to achieve 8-12 reps = -30 lbs</p><p> Bodyweight = 130 lbs
+</p><p><i>To calculate Actual Resistance:</i>
+</p><p>= Bodyweight + Assisted Weight<br> = 130 lbs + (- 30 lb) = 100 lbs<br> = 100 lbs
+</p><p><i>To calculate a warm-up weight from 50% of Workout Resistance:</i>
+</p><p>= Actual Resistance * 50 - Bodyweight<br> = (100 lbs * 50%) - 130 lbs<br> = 50 lbs - 130 lbs = -80 lbs
+</p><p><i>To calculate a weight increase of 5% from actual resistance:</i>
+</p><p>= Actual Resistance * 105% - Bodyweight<br> = (100 lbs * 105%) -130 lbs<br> = 105 lbs - 130 lbs = -25 lbs
+</p><h3><a name="%BWExercises"></a>Exercises Utilizing a Percentage of Bodyweight</h3><p>Many exercises utilize a portion of the bodyweight along with the added weight. For example, during Barbell Squats, the weight of the upper body and a portion of the upper thigh are lifted in addition to the added weight. This is very similar to what occurs in the Deadlift. Although the upper body is angled forward  at the bottom of the lift, it is lifted upward more directly against gravity along a very similar path as the added weight. In contrast, the thigh rotates from a more horizontal position at the bottom of the lift to a vertical position at top, moving less directly upward against gravity.
+</p><p>So, how can we accurately calculate the bodyweight used as a load for these exercises?
+</p>
+<div class="row"><div class="col-sm-12">
+<div class="WideTable">
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
+<caption align="TOP"><i>de Leva's Segment Weight data</i></caption>
+<tbody>
+<tr>
+<th width="40%" bgcolor="#d8cff1"> Segment
+</th>
+<th width="20%" bgcolor="#d8cff1"> Quantity
+</th>
+<th width="20%" bgcolor="#d8cff1"> Percent
+</th>
+<th width="20%" bgcolor="#d8cff1"> Extension
+</th>
+</tr>
+<tr>
+<td width="40%"> Head
+</td>
+<td width="20%" align="RIGHT"> 1
+</td>
+<td width="20%" align="RIGHT"> 6.810
+</td>
+<td width="20%" align="RIGHT"> 6.81
+</td>
+</tr>
+<tr>
+<td width="40%"> Whole Trunk
+</td>
+<td width="20%" align="RIGHT"> 1
+</td>
+<td width="20%" align="RIGHT"> 43.020
+</td>
+<td width="20%" align="RIGHT"> 43.02
+</td>
+</tr>
+<tr>
+<td width="40%"> Total Arm
+</td>
+<td width="20%" align="RIGHT"> 2
+</td>
+<td width="20%" align="RIGHT"> 4.715
+</td>
+<td width="20%" align="RIGHT"> 9.43
+</td>
+</tr>
+<tr>
+<td width="40%"> Total Leg
+</td>
+<td width="20%" align="RIGHT"> 2
+</td>
+<td width="20%" align="RIGHT"> 20.370
+</td>
+<td width="20%" align="RIGHT"> 40.74
+</td>
+</tr>
+<tr>
+<td width="40%" align="RIGHT"> Total Percent:
+</td>
+<td width="20%">
+</td>
+<td width="20%" align="RIGHT">
+</td>
+<td width="20%" align="RIGHT"> 100
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<p>Using normative data for the <a href="../Kinesiology/Segments">percentage weight of body segments</a>, we can calculate the weight of the move more directly upward with the weight (upper body). Using <a href="../Kinesiology/Segments#COG">center of gravity of body segments,</a> we can calculate torque required to turn body segments from near horizontal to near vertical.
+</p><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/Quadriceps/BBSquat"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/7815/1965/2411/SquatLow.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/7815/1965/2411/SquatLow.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/7815/1965/2411/SquatLow.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/7815/1965/2411/SquatLow.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/7815/1965/2411/SquatLow.jpg" alt="Squats" id="image-marker" rel="float: right; width: 230px; height: 309.217px; margin: 0px 0px 10px 10px;" class="" style="float: right; height: 309.217px; margin: 0px 0px 10px 10px;" width="230"></picture></a>
+</p><p><strong></strong><strong><a href="https://exrx.net/WeightExercises/Quadriceps/BBSquat">Squats</a> </strong>or<strong> <a href="../WeightExercises/ErectorSpinae/BBDeadlift">Deadlifts</a></strong>
+</p><p><i>Step 1</i>
+</p><p>Calculate weight of body segments that share similar center of gravity and move mostly upward with added weight, in this case upper body
+</p><p>Method A: Head + Trunk + 2 Arms = ~59.26% of total bodyweight<br> Method B: Total Body (100%) - 2 Legs (40.74%) = ~59.26% of total body weight
+</p><p><i>Step 2</i>
+</p><p>Calculate torque from heavy body segments that rotate significantly  against gravity, in this case, torque from both thighs.
+</p><p>Weight of 2 Thighs * Thigh's Center of Gravity from Knee
+</p><p>From <a href="../Kinesiology/Segments">body segment data</a> we know:
+</p><p>Weight of Thigh = ~11% of body weight<br> COG of Thigh = 0.43<i> </i>of segmental length measured from proximal end (from hip)
+</p><p>So we need to sum the weight of both legs and determine the COG from the opposite end
+</p><p>= 11% (2 Legs) * (1-0.43)<br> = 22% * 0.57<br> = 12.54 % of total body weight
+</p><p><i>Note: We would end up with 17.79% if we had used de Leva's data.</i>
+</p><p><i>% Body weight used = % weight of 2 thighs * COG from knee = [(2*14.47%) * (1-0.3854) COG] = 17.79%</i>
+</p><p><i>Step 3</i>
+</p><p>Add resistive forces of upward moving body segments (steps 1) to torque forces of upwardly rotating body segments (step 2). In this case, we add the weight of the upper body with the torque from the thighs.
+</p><p>Percentage of body weight used as a load during Squats or Deadlifts = ~72%
+</p><p><i>Note: Using de Leva's data in step 2, total percent bodyweight would be approximately 77%</i>
+</p><p><i>59.26% + 17.79%</i>
+</p><p>Here are other examples of exercises using only one leg:
+</p><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/Quadriceps/DBStepUp"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/3315/1965/2520/StepUps.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/3315/1965/2520/StepUps.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/3315/1965/2520/StepUps.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/3315/1965/2520/StepUps.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/3315/1965/2520/StepUps.jpg" alt="Barbell Step-up" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" style="float: right; margin: 0px 0px 10px 10px;" width="240" height="320"></picture></a>
+</p><p> or <strong><a href="../WeightExercises/Quadriceps/BBSingleLegSquat">Single Leg Squats</a></strong><br> Upward Moving = Total Body (100%) - 1 Leg (20.37%) = 79.63% of total body weight<br> Upward Rotating = Thigh Weight (11%) * Thigh COG (0.57) = 6.27%<br> % Body Weight used = Upward Moving (79.63%) + Upward Rotating (6.27%) = ~86%
+</p><p>Notice when Step-ups are performed with heavy weights, the lower leg assists in the initial push off, the hardest part of the movement. Never-the-less, the lower leg rises more directly against gravity with the body and added weight, whereas, the upper thigh rotates against gravity.
+</p><p>Notice other exercises like the Split Squat and Single Leg Split Squat appear to only use a single-leg exercise, but actually use both legs to lift the weight or at least the weight of the rear leg rests on a surface. On these particular exercises, the upper body and thigh of rear leg travel upward, whereas, the leg of the exercising thigh and the shank of the rear leg both rotate upward.
+</p><p><a href="../WeightExercises/Quadriceps/BBSplitSquat"><strong>Split Squat</strong></a> or <strong><a href="../WeightExercises/Quadriceps/DBSingleLegSplitSquat">Single Leg Split Squat</a></strong><br> Upward Moving = Total Body (100%) - 1 Leg (20.37%) - 1 Shank (4.57%) = ~75% of total body Weight<br> Thigh Rotation = Thigh Weight (11%) * Thigh COG (0.57) = 6.27%<br> Shank Rotation = Shank Weight (4.57%) * Shank COG (0.57) = 2.6%<br> % Body Weight used = Upward Moving (75%) + Upward Rotating (8.87%) = ~84%
+</p><p>Generally speaking, to calculate the percentage of bodyweight lifted upward, simply add up the percentages of all the body parts that are moving (or not moving) directly against gravity. If all but a few segments move, simply subtract the percentages of the segments that are NOT utilized from 100% (total body) to arrive at the percentage. Notice the percentages for the arms and legs are only for one each, so if both limbs are utilized, you will need to multiply by two.
+</p><p>Next, identify body parts that rotate upward significantly against gravity. Calculate the torque by multiplying the center of gravity of the body segments (from the fulcrum) by their respective segment weights.
+</p><p>And finally, add the resultants to determine the percent body weight contributing to the exercise's resistance.
+</p><hr align="LEFT"><h3><a name="Calculating1RM"></a>Calculating Percent One Rep Max</h3><p>What difference does accounting for the portion of body weight utilized as part of the workout resistance when calculating a percent of <a href="../Calculators/OneRepMax">1RM</a> for the squat?
+</p><p><a href="../WeightExercises/Quadriceps/BBSquat"><strong>Barbell Squat</strong></a><br> 1 RM = 300 lbs barbell weight<br> Bodyweight = 200 lbs
+</p><p><strong><u>Standard Method</u></strong>: One Rep Max (Without Percentage of Bodyweight Included)
+</p><p><i>Calculate 80% of 1RM</i>
+</p><p>80% 1RM x 300 lbs barbell = 240 lb barbell
+</p><p><strong><u>Modified Method</u></strong>: Body Weight Adjusted One Rep Max (Incorporating Percentage of Bodyweight Utilized)
+</p><p><i>Calculate Actual Resistance</i>:
+</p><p>Bodyweight used = 200 lbs bodyweight x 72% utilized = 144 lbs<br> Actual Resistance = 300 lbs bar + 144 = 444 lbs
+</p><p><i>Calculate 80% of 1RM</i>:
+</p><p>Gross 80% 1RM = 0.80 x 444 lbs Actual Resistance<br> Gross 80% 1RM = 355 lbs Actual Resistance
+</p><p>80% 1RM = 355 lbs Actual Resistance - 144 lbs body weight utilized<br> 80% 1RM = 211 lbs barbell
+</p><p>We can see a lighter barbell weight is required to achieve the desired resistance when accounting for the lifted portion of the body (ie: upper body weight). Now, let's see if this is consistent with findings in the literature...
+</p><hr align="LEFT"><h3><a name="Estimating1RM"></a>Estimating One Rep Max</h3><p>Although <a href="../Calculators/OneRepMax">1RM</a> Prediction Equations have been known to over or underestimate actual values for the bench press (Mayhew, et. al., 1995), it is interesting to note that Lesuer, et. al. (1997) found various prediction equations are more likely to under estimate 1RM for the deadlift (under prediction of 9 to 14%) and squat (under prediction of 2 to 8%) as compared to 1RM prediction for the bench press (under prediction of 0.8 - 6%).
+</p><p>Using the Brzycki equation, let's compare how a one rep max can be estimated using both methods:
+</p><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/Quadriceps/BBSquat"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/7315/1750/0821/Deadlift2.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/7315/1750/0821/Deadlift2.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/7315/1750/0821/Deadlift2.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/7315/1750/0821/Deadlift2.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/7315/1750/0821/Deadlift2.jpg" alt="Barbell Deadlift" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" style="float: right; margin: 0px 0px 10px 10px;" width="240" height="320"></picture></a>
+</p><p><strong><a href="../WeightExercises/ErectorSpinae/BBDeadlift">Deadlift</a></strong><br> 4 RM = 320 lbs barbell weight<br> Bodyweight = 200 lbs
+</p><p><strong><u>Standard Method</u></strong>: (Without Percentage of Bodyweight Included)
+</p><p><i>Calculate 1RM</i>
+</p><p>1RM = Barbell weight / (1.0278 - 0.0278 x reps)<br> 1RM = 320 lbs / (1.0278 - 0.0278 x 4 reps)<br> 1RM = 349 lbs barbell
+</p><p><strong><u>Modified Method</u></strong>: (Incorporating Percentage Bodyweight Utilized)
+</p><p><i>Calculate Actual Resistance</i>:
+</p><p>Bodyweight used = 200 lbs bodyweight x 72% utilized = 144 lbs<br> Actual Resistance = 320 lbs bar + 144 = 464 lbs
+</p><p><i>Calculate 1RM</i>
+</p><p>Gross 1RM = Actual Resistance / (1.0278 - 0.0278 x reps)<br> Gross 1RM = 464 lbs / (1.0278 - 0.0278 x 4 reps)<br> Gross 1RM = 506 lbs
+</p><p>1RM = 506 lbs Actual Resistance - 144 lbs body weight utilized<br> 1RM = 362 lbs barbell
+</p><p>Here, we can see how including the percentage of body weight in the formula increases the prediction of the 1RM by approximately 3.7%, a possible improvement in predicting 1RM using the data from Lesuer, et. al. (1997) as a guide.
+</p><hr align="LEFT"><h3><a name="AdjustingBWExercises"></a>Adjusting Exercises Utilizing Nearly Full Body Weight</h3><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/Gastrocnemius/SMStandingCalfRaise"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/3415/1965/2441/SmithCalfRaise.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/3415/1965/2441/SmithCalfRaise.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/3415/1965/2441/SmithCalfRaise.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/3415/1965/2441/SmithCalfRaise.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/3415/1965/2441/SmithCalfRaise.jpg" alt="Smith Calf Raise" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" style="float: right; margin: 0px 0px 10px 10px;" width="240" height="320"></picture></a>
+</p><p>When making quick calculations at the gym, it may be sufficient to calculate the full bodyweight on exercises such as the Pull-up, Chin-up, Dip and Standing Calf Raise; as we did with the early examples above. Simplifying calculations in this way can decrease computations that would likely not make a large impact on the final workloads, particularly since weight increases can range from 2.5 to 10%, One rep Max calculations are not exact, and warm-up resistances can range from 1/3 to 2/3 of the workout weight. So discrepancies of a couple pounds may not be worth the extra arithmetic since precise calculations are typically not necessary.
+</p><p>However, some may want to include the actual body segments that are actually being fully lifted in attempt to calculate slightly more precise values. To determine what body segments to count as the actual load, tally the weight of the body segments that move upward against gravity, then add the torque forces of body segments that are close to horizontal and rotate upward, as explained above. Do not count body segments that do not move upward against gravity at all. You may, however, decide to or not to include smaller body segments that do not contribute a significant force to the overall load. Here are a few examples showing three options with greater detail to accuracy with small and possibly insignificant differences:
+</p><p><a href="../WeightExercises/Gastrocnemius/SMStandingCalfRaise"><strong>Calf Raises</strong></a><br> A) Total Body = 100%<br> B) Body - 2 Feet = 100% - 2 (1.33%) = 97.34%<br> C) (Body - 2 Feet) + torque of (2 Feet - 2 Forefeet) = 97.34% + [0.50 COG x (2.66 - 0.66)] = 98.34%
+</p><p><a href="../WeightExercises/LatissimusDorsi/WtPullup"><strong>Pull-ups</strong></a><strong> / <a href="../WeightExercises/LatissimusDorsi/WtPullup">Chin-ups</a></strong>or<strong> <a href="../WeightExercises/PectoralSternal/WtChestDip">Dips</a></strong><br> A) Total Body = 100%<br> B) Body - 2 Arms = 100% - 2 (4.715%) = 90.57%<br> C) (Body - 2 Total Arms) + torque of 2 Upper Arms = 90.57% + (0.553 COG x 5.26) = 93.48%
+</p><p>The more forces in which you account, the more accurate the resulting figure. Although even more complex computations could be applied to further increase the accuracy of this percentage, we question the feasibility of such an approach since its application (ie: determining workloads) does not require an extremely high level of precision.
+</p><hr align="LEFT"><h3><a name="AlignedExercises"></a>Aligned Exercises</h3><p>For the above mentioned exercises, the added weight (point of resistive force) is practically in-line with the center of gravity of the body segments which also contribute to the resistive forces. This means that the muscles exert the same effort lifting each unit weight (eg: 1lb or 1kg) of body segment(s) as they do lifting the same unit weight of additional resistive forces (eg: barbell, dumbbell, etc.). 'In-line' means that the Point of Resistance and the Center of Gravity of Body Weight Segments are nearly aligned, along a similar downward path of resistive forces. For these exercises, we add up the segments that are lifted (both upward moving and upward rotating) to find the contribution of resistance from body weight. Then we can simply add those forces to the additional resistive forces to find the Actual Resistive Forces.
+</p><h3><a name="NonalignedExercises"></a>Non-aligned Exercises</h3><p>So how do we determine the contribution of weight from the body segments in these exercises?
+</p><ul>
+<li><a href="../WeightExercises/RectusAbdominis/WtVerticalLegHipRaise">Leg Raises</a></li>
+<li><a href="../WeightExercises/RectusAbdominis/WtInclineSitUpX">Sit-ups</a></li>
+<li><a href="../WeightExercises/ErectorSpinae/WtHyperextension">Hyperextensions</a></li>
+</ul><p>Notice with these exercises that the center of gravities of the added weight and the body segments do not align over one another as do the previously mentioned exercises. Weight added further away from the fulcrum exerts more relative torque on the fulcrum joint than does the weight of the body segments. If the point of resistive force is twice as far from the fulcrum (moving joint or point) as the Center of Gravity of Body Weight Segments, that means the Body Weight Segment exerts half the force per unit weight as compared to the resistive force.
+</p><p>Alternatively, if the point of resistive force is placed half way between the fulcrum and Center of Gravity of Body Weight Segments, the Body Weight Segment exert twice the force per unit weight as compared to the resistive force.
+</p><p>Most of the non-aligned exercise are the former case where the point of resistive force is further away from the fulcrum, or movement joint, as compared to the Center of Gravity of Body Weight Segments.
+</p><h3><a name="NonalignedAlgorithm"></a>Algorithm for Adjusting Percentage Bodyweight on Non-aligned Exercises</h3><p>In Non-aligned exercises, we will determine the body segment's torque relative to the added weight's torque at the most difficult part of the exercise. This will allow us to determine the effective resistance required to lift the body segment compared to the added load.
+</p><p>Relative torque can be calculated by comparing the distance from the joint fulcrum to both the added weight and the combined body segment's centers of gravities (COGs). A ratio representing this relationship is used to adjust the percentage body weight value accordingly. If the center of gravity of the added weight is further away from the fulcrum, we effectively reduce the Bodyweight Percentage figure by multiplying a COG Variation Ratio figure less than 1. If the center of gravity of the added weight is closer to the fulcrum, we effectively increase the Bodyweight Percentage figure by multiplying a COG Variation Ratio figure greater than 1.
+</p><p>COG Variation Ratio = Body Segment's COG / Added Weight's COG<br> Adjusted Bodyweight Percentage Used = Bodyweight Percentage Used * COG Variation Ratio
+</p><p>We are not attempting to calculate absolute load in non-aligned exercises, so it's not necessary to adjust numbers if the body segment's COG does not move directly against gravity, as long as the added weight moves in the same direction.
+</p><p>Begin with traced or printed photo of the subject in the position of greatest effort, viewed perpendicular to the plain of movement. On free weight exercises (eg: Barbells, Dumbbells, Weighted), this is typically where the center of gravity of the combined load (all lifted body segments and added weight) is the furthest perpendicular distance from the fulcrum joint.
+</p><p>The combined center of gravity of multiple body segments can be calculated using the <a href="../Kinesiology/COG">Segmental Method Formula</a> and data from known averages of length, weight, and center of gravity of each segment (see <a href="../Kinesiology/Segments">body segment stats</a>). The center of gravity of the added weight is much easier to ascertain because the center of the dumbbell, barbell, weight plate, etc., can easily be located.
+</p><p>The figures in the following example are simplified so this concept can be illustrated more clearly:
+</p><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/HipFlexors/WtVerticalStraightLegRaise"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/9715/1965/2708/WeightedVerticalStraightLegRaise.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/9715/1965/2708/WeightedVerticalStraightLegRaise.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/9715/1965/2708/WeightedVerticalStraightLegRaise.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/9715/1965/2708/WeightedVerticalStraightLegRaise.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/9715/1965/2708/WeightedVerticalStraightLegRaise.jpg" alt="Weighted Vertical Straight Leg Raise" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" style="float: right; margin: 0px 0px 10px 10px;" width="240" height="320"></picture></a>
+</p><p><a href="https://exrx.net/WeightExercises/HipFlexors/WtVerticalStraightLegRaise"><strong>Weighted Vertical Straight Leg Raise</strong></a></p><p> Added weight = 10 lbs<br> Bodyweight = 100 lbs<br> Bodyweight Percentage Used: 40%<br> Segment Orientation: Thigh (horizontal), Shank (horizontal), Foot (vertical)<br> Legs Center of Gravity = 15" from hip (joint fulcrum)<br> Added Weights Center of Gravity = 30" from hip
+</p><p>The greatest torque on this exercise happens to be when the leg is horizontal, or perpendicular to the line of force (ie: gravity). Since the added weight exerts 2 times relative torque on hip as does leg's center of gravity, that means we need effectively reduce the Bodyweight Percentage Used figure by half. This will allow us to calculate actual resistance relative to added weight. So a COG Variation Ratio of 0.5 will be multiplied by a Bodyweight Percentage Used of 40% to get the Adjusted Bodyweight Percentage:
+</p><p>COG Variation Ratio = Body Segment's COG / Added Weight's COG = 0.5<br> Adjusted Bodyweight Percentage Used = 40% x 0.5 = 20%
+</p><p><i>To calculate Actual Resistance (relative to added weight):</i>
+</p><p>= (Bodyweight * Adjusted Bodyweight Percentage Used) + Added Load<br> = (100 lbs x 20%) + 10 lbs<br> = 30 lbs
+</p><p><i>To calculate a weight increase 5% of actual resistance (new dumbbell weight):</i>
+</p><p>= Weight of dumbbell + (Actual Resistance * 5%)<br> = 10 lbs + (30 lbs * 5%)<br> = 10 lbs + 1.5 lbs<br> = 11.5 lbs
+</p><p>And another example:
+</p><p><a href="../WeightExercises/Hamstrings/BBGoodMorning"><strong>Barbell Goodmorning</strong></a><br> Barbell = 60 lbs<br> Bodyweight = 140 lbs<br> Bodyweight Percentage Used: 59% (body - 2 legs)<br> Upper body's Center of Gravity = 13" from hip (joint fulcrum)<br> Added Weights Center of Gravity = 22" from hip
+</p><p>COG Variation Ratio = Body Segment's COG / Added Weight's COG = 0.59<br> Adjusted Bodyweight Percentage Used = 59% x 0.59 = 34.8%
+</p><p>In the Goodmorning, we're only including the upper body weight and not the weight of the leg, primarily because the legs do not move significantly against gravity, unlike the torso which is nearly horizontal at the lowest position. Also, the legs move relatively passively at the ankle to maintain center of gravity the body and barbell over the feet. Therefore, the movement of the legs do not significantly affect the total workload.
+</p><p><i>To calculate Actual Resistance:</i>
+</p><p>= [Bodyweight * Adjusted Bodyweight Percentage Used] + Added Load<br> = [140 lbs x 34.8%] + 60 lbs<br> = 108.72 lbs
+</p><p><i>To calculate a warm-up weight (barbell weight) from 50% of Actual Resistance :</i>
+</p><p>= (Actual Resistance * 50%) - (Bodyweight * Adjusted Bodyweight Percentage Used )<br> = 108.72 lbs * 50% - 140 lbs * 34.8% <br> = 54.36 - 48.72<br> = 5.6 lbs
+</p><p><i>To calculate a weight increase of 5% from actual resistance (new barbell weight):</i>
+</p><p>= Weight of Barbell + (Actual Resistance * 5%)<br> = 60 lbs + (108.72 lbs x 0.05)<br> = 60 lbs + ~3 lbs<br> = 63 lbs
+</p><h3><a name="NonalignedExamples"></a>Other Examples of Non-aligned Exercises</h3><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/PectoralSternal/WtPushupHandles"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/1815/1965/2740/WeightedPushup.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/1815/1965/2740/WeightedPushup.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/1815/1965/2740/WeightedPushup.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/1815/1965/2740/WeightedPushup.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/1815/1965/2740/WeightedPushup.jpg" alt="Weighted Push-up" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" class="redactor-selected-image" style="float: right; margin: 0px 0px 10px 10px;" width="240" height="320"></picture></a>
+</p><p><a href="https://exrx.net/WeightExercises/PectoralSternal/WtPushup"><strong>Weighted Push-up</strong></a></p><p> Lifted segments: Whole body - 2 whole arms<br> Axis of rotation: Toes on floor<br> Hypothetically, if we were to add resistance directly above the center of gravity of the body, the percentage of bodyweight used would be considered 100% since the added resistance would encounter the same mechanics as the bodyweight lifted. However, since the added weight is actually placed higher than directly above the center of gravity, we would calculate a COG Variation Ratio &lt; 1. This is because loads higher up on the back (away from fulcrum) will seem heavier than if we were to place them at the body's center of gravity.
+</p><p><a href="../WeightExercises/RectusAbdominis/WtInclineSitUp"><strong>Weighted Sit-up</strong></a><br> Lifted segments: Whole body - 2 whole legs<br> Axis of rotation: Hips are the fulcrum joint, although waist initially flexes<br> Weight can be placed on upper chest or behind neck, not only affecting torque of added weight, but also <a href="Tips#ArmPosition">arm positioning</a> (effects segment's COGs).
+</p><p><a href="../WeightExercises/RectusAbdominis/WtCrunch"><strong>Weighted Crunch</strong></a><br> Lifted segments: part of thorax, arms, and head<br> Axis of rotation: thoracic spine.<br> Weight can be placed on upper chest or behind head, not only affecting torque of added weight, but also <a href="Tips#ArmPosition">arm positioning</a> (effects segment's COGs).
+</p><p><a href="../WeightExercises/HipAbductor/WtLyingHipAbduction"><strong>Weighted Hip Abduction</strong></a><br> Lifted segments: Whole leg<br> Axis of rotation: Hip<br> Measure at initial movement when weight is greatest perpendicular distance from hip
+</p><p><a href="../WeightExercises/ErectorSpinae/BB45Hyperextension"><strong>Barbell 45 degree Hyperextension</strong></a><br> Lifted segments: Whole body - 2 whole legs<br> Axis of rotation: Hips are the fulcrum joint, although waist articulates<br> Measure when spine is horizontal - greatest perpendicular distance from hip
+</p><h3><a name="SpecialCases"></a>Special Cases</h3><p>Normally, we would measure force at the point where the added weight's and bodyweight's COG are the furthest perpendicular distance from the fulcrum joint. In the case of the Weighted Leg Raises, that is when the legs are straight just as the legs and added weight are lifted from the floor. But notice in the bent leg version, as the weight is lifted upward, both the added  weight and the legs COG travel much closer to the hip than during the straight leg version. To account for the distinction of these two variations, we propose to analysis torques ratios at the midpoint, half way through the movement, or 45 degrees from the lowest starting position.
+</p><p><a href="../WeightExercises/HipFlexors/WtInclineStraightLegRaise"><strong>Weighted Incline Straight Leg Raise</strong></a><br> Lifted segments: Whole Leg<br> Axis of rotation: Hip
+</p><p><a href="../WeightExercises/HipFlexors/WtInclineLegRaise"><strong>Weighted Incline Leg Raise</strong></a><br> Lifted segments: Whole Leg (extended at bottom and flexed at top)<br> Axis of rotation: Hips although knee articulates<br> Notice this movement is easier than straight leg version above, since the knees bend as the legs rise.
+</p><p>Notice that the Leg Hip Raise version involves hip flexion at the top of the movement. Although Hips and knees bend initially, movement can be harder at the top, although paradoxically, both COGs become closer to axis of rotation in that position.
+</p><p><a href="../WeightExercises/RectusAbdominis/WtInclineLegHipRaise"><strong>Weighted Incline Leg Hip Raise</strong></a><br> Lifted segments: Whole leg + Pelvis + Abdomen<br> Axis of rotation: Lumbar or Thoracic Spine
+</p><h3><a name="AmbiguousExercises"></a>Ambiguous Exercises</h3><p>At first glance, some exercises appear to be non-aligned exercise, but after further examination, we can see the added weight may be sufficiently aligned, either directly over or under COG of the sum of the moving body segments.
+</p><p><a href="../WeightExercises/BackGeneral/WTSupineRow"><strong>Weighted Inverted Row</strong></a><br> (Weight of body - arms) + added weight<br> Possible similar situation as Weighted Push-up (mentioned above). The classification of this movement depends where the weight is placed on the body. Although, unlike pushups mentioned above, where weight is placed higher up on back, the added weight on the Weighted Inverted Row is usually placed closer to the center of gravity of body, in which case, it would be classified as an aligned exercise.
+</p><p>There is, however, an ambiguity in what position to analyze this exercise. At what point do we consider the hardest part of this exercise? At the top of the motion, the elbow travels the greatest perpendicular distance from the shoulder. On the other hand, the body's center of gravity is furthest from the fulcrum made by the heel and floor, assuming if the torso does not travel lower than the elevated feet. The percentage of body weight utilized actually turns out to be the same in any case. This is because the added weight shares the same lever system as the bodyweight.
+</p><p data-redactor-inserted-image="true"><a href="https://exrx.net/WeightExercises/Hamstrings/BBStraightLegDeadlift"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/5815/1965/2506/StraightLegDeadlift.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/5815/1965/2506/StraightLegDeadlift.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/5815/1965/2506/StraightLegDeadlift.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/5815/1965/2506/StraightLegDeadlift.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/5815/1965/2506/StraightLegDeadlift.jpg" alt="Barbell Straight Leg Deadlift" id="image-marker" rel="float: right; width: 240px; height: 320px; margin: 0px 0px 10px 10px;" style="float: right; margin: 0px 0px 10px 10px;" width="240" height="320"></picture></a>
+</p><p><a href="https://exrx.net/WeightExercises/Hamstrings/BBStraightLegDeadlift"></a><strong><a href="https://exrx.net/WeightExercises/Hamstrings/BBStraightLegDeadlift">Straight Leg Deadlift</a></strong></p><p>On the Straight Leg Deadlift, notice at the bottom of the exercise, how the rear end falls back and the barbell is pulled in over the feet. The foot (instep) position relative to the rest of the body is indicative of the body's line of gravity, necessary to maintain balance on a sagittal plane. Depending on how the exercise is performed, the barbell may or may not be aligned under the COG of moving body segments.
+</p><p>It is also interesting to note that the torso rotates upward, whereas, the added weight travels directly upward against gravity. One could argue that the torso also rotates upward in the <a href="../WeightExercises/GluteusMaximus/BBDeadlift">Deadlift</a> and <a href="../WeightExercises/GluteusMaximus/BBSquat">Squat</a>. With those exercises, however, the torso only rotates partially maybe 45 degrees, but there is also a lifting component from the thighs so we count the entire weight of the upper body plus the torque of the thighs for the Deadlift and Squat.
+</p><p><i>If Aligned</i>
+</p><p>If the barbell is aligned under the upper body's COG (head, torso, arms), we add the torque of the upper body to the weight of the barbell to calculate Actual Resistance (AR). This is because the torso rotates upward, whereas, the barbell moves more directly upward. The torque of the upper body is the horizontal distance from this COG line to the hip fulcrum divided by distance from the end of the segments (ie: vertex of head) multiplied by the weight of the upper body.
+</p><p><i>A) Actual Resistance = Upper Body Torque + Added Weight<br> Upper Body Torque = Weight: Torso, Head, Arms x Upper Body COG Distance from Hip / Total Lever Length</i>
+</p><p><i>If Non-aligned</i>
+</p><p>If it turns out to be non-aligned movement, we will need to factor a COG Variation Ratio into the Upper Body Torque before adding that to the weight of the barbell. To arrive at a COG Variation Ratio, first we calculate the COG line of the upper body (head, torso, arms). We can then measure its horizontal distance from the hip fulcrum. Next, we measure the distance from the weight to the hip fulcrum. But, unlike the Barbell Goodmorning, the added weight does not share the same ridged lever system as the torso. We would still, however, measure the horizontal distance from the middle of the dangling barbell to the hip fulcrum. In this case, the barbell would be held at a closer perpendicular distance to the hip than the upper body's COG. So dividing the Body's COG Horizontal Distance by the barbells COG Horizontal Distance will result in a COG Variation Ratio greater than 1. This is in contrast to the previously mentioned exercises where the COG Variation Ratio was less than 1. From here, we multiply the COG Variation Ratio by the Upper Body Torque, thereby calculating the adjusted torque relative to the force required to lift the barbell upward.
+</p><p><i>B) Actual Resistance = (Upper Body Torque * COG Variation Ratio) + Added Weight</i>
+</p><p><i>Discrepancy of Arm Movement</i>
+</p><p>Some may argue that the arms travel upward directly against gravity in-line with the barbell and only the torso and attached head pivot at the hip. If we take that approach, we should only include the head and torso and not the arms when calculating the COG for the upper body. This will shift the COG posteriorly, possibly closer to the barbell's COG line of force. Only if the upper body's COG (minus the arms) is not in-line with the barbell's line of force do we need to calculate a COG Variation Ratio. In any case, we would add the torque (if aligned) or adjusted torque (includes COG Variation Ratio) of only the head and torso to the full weight of the arms and barbell combined. So we would use one of the modified formulas depending on the alignment as follows:
+</p><p><i>A) Actual Resistance = Head &amp; Torso Torque + Arm Weight + Added Weight</i>
+</p><p><i>B) Actual Resistance = (Head &amp; Torso Torque * COG Variation Ratio) + (Arm Weight + Added Weight)</i>
+</p><h3>
+<hr align="LEFT"></h3><h3><a name="InsignificantSegments"></a>Identifying Insignificant Body Segments</h3><p>Attempting to calculate actual resistances for every exercise that have insignificant body segments in play may unnecessarily complicate workload calculations. In a fitness or sports conditioning setting, including certain segments will not likely make significant effect on the resultant workload. Counting the resistive forces for insignificant segments may not be necessary for the following reasons:
+</p><ol>
+<li>movement of segments requires extremely little effort </li>
+<li>weight of segments(s) are very small in comparison to the added weight. </li>
+<li>segment(s) does not move or rotate significantly upward against gravity </li>
+</ol><p>This means assessing a percentage utilized bodyweight will not be required for every exercise. Examples of exercises likely not requiring a percentage of bodyweight may include:
+</p><ul>
+<li><a href="../WeightExercises/Biceps/BBCurl">Arm Curl</a></li>
+<li><a href="../WeightExercises/PectoralSternal/BBBenchPress">Bench Press</a></li>
+<li><a href="../WeightExercises/BackGeneral/BBBentOverRow">Bent-over Row</a></li>
+<li><a href="../WeightExercises/Triceps/BBTriExt">Triceps Extension</a></li>
+<li><a href="../WeightExercises/TrapeziusUpper/BBShrug">Shrugs</a></li>
+</ul><p>We should, however account for the weight of body segment(s) if its load is significant in proportion the added weight weight. For example:
+</p><ul>
+<li><a href="../WeightExercises/HipFlexors/WtLyingLegRaise">Weighted Leg Raise</a></li>
+<li><a href="../WeightExercises/HipAbductor/WtLyingHipAbduction">Weighted Lying Hip Abduction</a></li>
+<li><a href="../WeightExercises/HipAdductors/WTLyingHipAdduction">Weighted Lying Hip Adduction</a></li>
+<li><a href="../WeightExercises/RectusAbdominis/WtCrunch">Weighted Crunch</a></li>
+</ul><p>Some exercises may require closer examination to determine if the body segments are of significance. For example on <a href="../WeightExercises/DeltoidLateral/DBLateralRaise">Lateral Raise</a>, if 10 lb dumbbells are being used, the torque of the arm would be a significant portion of the resistance. However, if 50 lb dumbbells are being used, then the torque of the arms would not be significant enough to affect workloads.
+</p><p>In a physical therapy or scientific experimental settings, it may necessary to count these smaller body segments as part of the total workload. This is because these lighter body segments would make up a significant portion of the total workload in comparison to the very light weights commonly used in a rehabilitation. Interestingly, MedX weight training equipment was modeled after their physical therapy and scientific testing apparatuses. Some of these designs, such as the <a href="../WeightExercises/RectusAbdominis/LVSideLyingLegHipRaise">Lever Side Lying Leg Hip Raise</a> position the user on their side to correct for measurement error due to gravity.
+</p><p>Keep in mind, the orientation of an exercise can affect if a body segment should be counted. For example, we would count the upper body weight in a <a href="../WeightExercises/GluteusMaximus/SLSquat">Sled Squat</a> since the body is in an upright position, so the body segments have to be lifted upward against gravity. In contrast, notice body segments are no longer lifted against gravity during the Sled Lying Leg Press, a very similar movement. Notice with the <a href="../WeightExercises/Quadriceps/SLLyingLegPress">Sled Lying Leg Press</a>, the body segments travel horizontal instead of upward, so the upper body segments are no longer counted as part of the resistance.
+</p><p>Actually, at the hardest part of the movement, the lower leg prepares to rotate downward. For the reasons discussed above, we would not need to subtract the weight from the added weight on exercises have 'falling' body segments during concentric contraction of the target muscle groups, except if those body segments make up a significant portion of the weight, as they do in machine assisted exercises, also discussed above.
+</p><p>However, bodyweight is utilized if the body segment travels vertically against gravity, or even at an upward diagonal angle, like during a <a href="../WeightExercises/Quadriceps/SLHackSquat">Sled Hack Squat</a>. Even though the resistance is reduced to approximately 71% at a 45° angle, both the resistances of the added weight, sled weight, and the upper bodyweight are reduced the same, so they remain relatively proportionate.
+</p><h3><a name="anchor852827"></a>Olympic-style Weightlifts</h3><p>At first glance, we might assume the hardest part of the <a href="../WeightExercises/OlympicLifts/Clean">Clean</a> or a <a href="../WeightExercises/OlympicLifts/Snatch">Snatch</a> would be either (1) at the floor, where inertia has to be overcome and the joint angles are least advantageous, as with the <a href="../WeightExercises/ErectorSpinae/BBDeadlift">deadlift</a> (see <a href="#%BWExercises">deadlift analysis</a> above), or (2) when the barbell has to clear the knees, since the moment arm at the hip is longest and is required to open in angle (back angle was static until this point).
+</p><p>However, we know that the major problem for missing a Snatch is not at these points, but rather, failing to finish the extension. Similarly, the major failing point for the Clean is after the initiation of the second pull.
+</p><p>A diagram presented by Zatsiorsky &amp; Kraemer (1995) show that the greatest force is applied to the upwardly traveling barbell at approximately 20% [2/10.2 relative height units] from the highest extended position (Position 5 vs 6). At this position, the back angle is relatively high with the upper body center of gravity at a short perpendicular distance from hip (fulcrum of movement). When the greatest forces are being applied to barbell (hardest part of the exercise), the upper body is approaching an upright position and has already risen upward against gravity approximately 77% [1-1.9/8.2 relative height units] from the lowest position (Position 5 vs 1).
+</p><p>This is not to suggest that the lower body is not lifted in the Olympic-style weightlifts or that the weight is lifted beyond this point is primarily lifted with the upper body. In fact, we know that the hips are the primary movers to drive the barbell upward. Unlike most weight training exercises performed at a slower motion, these lifts rely on accelerating the weight by transferring momentum from power of the hips to the bar, so it can be thrown upward.
+</p><p>We can clearly see, the body rises upward with such force that heels momentarily leave the floor. Bodyweight is obviously being lifted. However, the majority of height is obtained just before the highest forces are being applied to the bar. Therefore, it does not appear that bodyweight is a significant force in comparison to the weight of the barbell at the hardest portion of the exercises (AKA failing point). For this reason, we believe that a percentage of bodyweight would not be required to calculate actual loads for these movements.
+</p><h3><a name="Machines"></a>Free Weight versus Machine Force Vectors</h3><p>On free weight exercises, the direction of Resistive Forces are directed downward by gravity for both the added weight and lifted body segments. However, when performing an exercise on machines (eg: Lever, Cable), the direction of resistive forces acting upon the added weight can be redirected according to the design and use of the machine, whereas, any lifted body segments move against gravity. For example, in the <a href="../WeightExercises/RectusAbdominis/CBLyingLegHipRaise">Cable Lying Leg Hip Raise</a> the force of the added resistance is redirected diagonally via pulley cable, yet the weight of the lower leg and Hips is pulled downward vertically by gravity. This can be more complicated to adjust the percentage of bodyweight to a meaningful number.
+</p><p>In addition, even if we corrected for this difference of force vectors, the amount of resistance provided by a machine can be different from a free weight, even when the same amount of weight is loaded. To get an accurate estimate of actual weight, you would need to access the mechanics of a specific machine to make necessary calculations to convert the weight placed or selected on the machine to the equivalent free weight load.
+</p><p>However, on machines where you are trying to determine the percentage of bodyweight contribution to the resistance, you may need to estimate the actual force. Here are possible methods of ascertaining actual loads on machines. Some methods are more accurate, while others may be a bit extreme, so you'll need to determine at what level of accuracy you require, so you can determine the best approach.
+</p><ul>
+<li>Assume the weight of the machine is the actual weight
+<ul>
+<li>eg: 10 lbs = 10 lbs </li>
+<li>Least accurate method </li>
+</ul></li>
+<li>Estimate the weight ratio based on lifting trails and convert weights accordingly
+<ul>
+<li>200 lbs 4 rep max on machine = 150 lbs 4 rep max on free weight equivalent </li>
+<li>Therefore, 10 lb on machine = 7.5 lbs </li>
+</ul></li>
+<li>Contact the equipment manufacturer, ask them the conversion formula for the machine
+<ul>
+<li>Also ask them what method they used to arrive at their proposed conversion </li>
+</ul></li>
+<li>Measure force with scale(s)
+<ul>
+<li>Hanging (pulling) scales
+<ul>
+<li>Load is pulled up in line with additional accessories: </li>
+<li>Chain(s), strap(s), or hook(s) and possibly pulley(s) </li>
+</ul></li>
+<li>Flat (pushing) scale
+<ul>
+<li>Load is held up compressed scale in between </li>
+<li>If scale is placed under feet or on seat, body weight is subtracted </li>
+</ul></li>
+<li>Construct a conversion formula accordingly </li>
+</ul></li>
+<li>Determine resistance using physics or mechanical calculations
+<ul>
+<li>Lever machines
+<ul>
+<li>will require length measurements </li>
+<li>may require the weights and center of gravities of the machine lever components </li>
+</ul></li>
+<li>On selectorized machines, the actual weights of the plates should be verified. </li>
+</ul></li>
+</ul><p>It would be ideal to ascertain the resistance on a machine at the most difficult point of the exercise. This point may vary on machines where the point is affected by varying user heights with different body segment lengths and resulting machine adjustments.
+</p><h3><a name="ForceAnalysis"></a>Force Analysis</h3><p>To determine bodyweight percentages utilized in exercises, we decided to estimate force with a torque analysis. This is not an analysis of work, energy, or angular moment of inertia. Although calculating work will likely result in comparable numbers, we believe that approach would have been more indirect.
+</p><p>Work would have included a distance component. When we say an exercise is difficult, we typically are not referring to the work required, we are more likely referring to the effort expended at the hardest point of the exercise.
+</p><p>Our calculations do not attempt to measure forces within specific muscles. Examining all the force vectors affected by origins, insertions, and lever systems is far beyond the scope our objective. Furthermore, we have not accounted for other extraneous variables such as elastic energy of muscle, particularly <a href="../Kinesiology/Glossary#Biarticulate">biarticulate</a> muscles through <a href="../ExInfo/Muscle#Passive">passive insufficiency</a>, a third force assisting on some exercises like at the bottom of the <a href="../WeightExercises/Hamstrings/BBStrBackStrLegDeadlift">straight leg deadlift</a> and resisting on other exercises such as the top of a <a href="../WeightExercises/HipFlexors/WtHangingStraightLegRaise">straight leg leg raises</a>.
+</p><p>The purpose of these calculations is to determine actual workloads so more accurate exercise prescriptions can be made in the form of weight increases, warm-up resistances, 1 rep maximums, and percentages of 1RMs.
+</p><h3><a name="Quiz"></a>Comprehension Quiz Exercises</h3><p>After familiarizing yourself with incorporating a percentage bodyweight in calculating workloads, consider answering the questions below to test your understanding of these principles and concepts discussed in this article. Provide examples by listing exercises that fit into these descriptions (below). Try to provide unique examples that are different from one another. For example, don't give both squat and hack squat as examples since they are somewhat similar movements. Perhaps give an example of both upper and lower body exercises with different characteristics
+</p><ol>
+<li>List exercises where the bodyweight is aligned with the added weight.
+<ol>
+<li>Also briefly describe the basic formula arriving at the percentage of body weight used in the exercise. </li>
+</ol></li>
+<li>List exercises where the bodyweight is NOT aligned with the added weight.
+<ol>
+<li>Also briefly describe the basic formula arriving at the percentage of body weight used in the exercise. </li>
+</ol></li>
+<li>List exercises where certain body segment(s) may not need to be assessed, and explain why these body segments would not need be calculated as part of the load. </li>
+<li>Provide examples of exercises where the center of gravity of the sum of the body segments moving against gravity could be a greater perpendicular distance from the fulcrum joint as compared to the added weight. </li>
+</ol><hr align="LEFT"><h3><a name="1RMReferences"></a>References</h3><p><i>Mayhew JL, Prinster JL, Ware JS, Zimmer DL, Arabas JR, M G, Bemben MG (1995). Muscular endurance repetitions to predict bench press strength in men of different training levels. J Sports Med Phys Fitness, 35 (2): 108-13.</i>
+</p><p><i>Lesuer DA, McCormick JH, Mayhew JL, Wasserstein RL, Arnold MC (1997). The Accuracy of Prediction Equations for Estimating 1-RM Performance in the Bench Press, Squat, and Deadlift. Journal of Strength and Conditioning Research, 11(4), 211-213.</i>
+</p><p><i>Zatsiorsky VM, Kraemer WJ (1995). Science and Practice of Strength Training. 2nd Ed, 39-40.</i></p>
+<hr><center><a href="#top">Top</a></center><center><a href="../WeightTraining">Main Menu</a> | <a href="../Kinesiology/Segments">Segment Data</a> | <a href="../Kinesiology/COG">Center of Gravity</a> | <a href="../Calculators/Workload">Workload Adjustment Calculator</a></center>
+</article>
+<article>
+<div class="">
+</div>
+</article>
+<article>
+<div class="subfooter no-print">
+</div>
+</article>
+</main>
+<section id="sidebar" class="col-sm-3 Add-Margin-Bottom">
+<div class="">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6329449765532083" data-ad-slot="6503680016" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class=" Add-Margin-Bottom">
+<style>
+
+a.ccm-block-page-list-rss-feed{
+
+    position: absolute;
+
+    top: 0px;
+
+    right: 0px;
+
+}
+
+div.ccm-block-page-list-title {
+
+  font-size: 16px;
+
+  font-weight: normal;
+
+}
+
+div.ccm-block-page-list-title a,div.ccm-block-page-list-title a:hover,div.ccm-block-page-list-title a:visited{ 
+
+ border-bottom:none !important; text-decoration:none !important;}
+
+div.ccm-block-page-list-wrapper {
+
+    position: relative;
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-horizontal {
+
+    display: table;
+
+    width: 100%;
+
+	 padding-right:20px;
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-horizontal,
+
+div.ccm-block-page-list-page-entry {
+
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+div.ccm-block-page-list-page-entry-horizontal div.ccm-block-page-list-page-entry-thumbnail {
+
+    display: table-cell;
+
+    vertical-align: top;
+
+    width: 1px;
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-horizontal div.ccm-block-page-list-page-entry-thumbnail img {
+
+    width: 120px;
+	max-height:180px;
+    max-width: none;
+
+}
+
+
+
+
+
+div.ccm-block-page-list-page-entry-horizontal div.ccm-block-page-list-page-entry-text {
+
+    display: table-cell;
+
+    padding-left: 15px;
+
+    vertical-align: top;
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-text div.ccm-block-page-list-title {
+
+  /*  font-weight: bold;*/
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-read-more {
+
+    margin-top: 20px;
+
+}
+
+
+
+@media only screen and (max-width:992px){
+
+	div.ccm-block-page-list-page-entry-horizontal
+
+	{
+
+		width: 100%;
+
+		float:left;
+
+		max-height:180px;
+
+		
+
+	}
+
+}
+
+@media only screen and (max-width:768px){
+
+	div.ccm-block-page-list-page-entry-horizontal
+
+	{
+
+		width: 50%;
+
+		float:left;
+
+		height:180px;
+
+	}
+
+}
+
+@media only screen and (max-width:600px){
+
+	div.ccm-block-page-list-page-entry-horizontal
+
+	{
+
+		width: 100%;
+
+		height:auto;
+
+	
+
+	}
+
+}
+
+</style>
+<div class="ccm-block-page-list-wrapper">
+<div class="ccm-block-page-list-header">
+<h5>Related Products</h5>
+</div>
+<div class="ccm-block-page-list-pages">
+<div class="ccm-block-page-list-page-entry-horizontal">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/Store/Other/Physigraphe" target="_self">
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/8414/5371/9075/i_logo_products_d1.png" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/8414/5371/9075/i_logo_products_d1.png" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/8414/5371/9075/i_logo_products_d1.png" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/8414/5371/9075/i_logo_products_d1.png" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/8414/5371/9075/i_logo_products_d1.gif" alt="#" class="img-responsive"></picture>
+</a>
+</div>
+<div class="ccm-block-page-list-page-entry-text">
+<div class="ccm-block-page-list-title">
+<a href="https://exrx.net/Store/Other/Physigraphe" target="_self">Physigraphe V2 Pro Clip Art CD-ROM</a>
+</div>
+</div>
+</div>
+<div class="ccm-block-page-list-page-entry-horizontal">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/Store/Other/PersonalTrainerForms" target="_self">
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/1415/0374/2991/PDFFormsExPros.png" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/1415/0374/2991/PDFFormsExPros.png" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/1415/0374/2991/PDFFormsExPros.png" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/1415/0374/2991/PDFFormsExPros.png" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/1415/0374/2991/PDFFormsExPros.png" alt="#" class="img-responsive"></picture>
+</a>
+</div>
+<div class="ccm-block-page-list-page-entry-text">
+<div class="ccm-block-page-list-title">
+ <a href="https://exrx.net/Store/Other/PersonalTrainerForms" target="_self">Fillable PDF Forms for Exercise Professionals</a>
+</div>
+</div>
+</div>
+<div class="ccm-block-page-list-page-entry-horizontal">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/Store/Other/TrainerClipArt" target="_self">
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/7114/5328/2433/TrainingClipsCover.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/7114/5328/2433/TrainingClipsCover.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/7114/5328/2433/TrainingClipsCover.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/7114/5328/2433/TrainingClipsCover.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/7114/5328/2433/TrainingClipsCover.jpg" alt="#" class="img-responsive"></picture>
+</a>
+</div>
+<div class="ccm-block-page-list-page-entry-text">
+<div class="ccm-block-page-list-title">
+<a href="https://exrx.net/Store/Other/TrainerClipArt" target="_self">Trainer ClipArt CD-ROM</a>
+</div>
+</div>
+</div>
+<div class="ccm-block-page-list-page-entry-horizontal">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/Store/Other/SlimGuide" target="_self">
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/6214/5295/0330/C-120_and_book.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/6214/5295/0330/C-120_and_book.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/6214/5295/0330/C-120_and_book.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/6214/5295/0330/C-120_and_book.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/6214/5295/0330/C-120_and_book.jpg" alt="#" class="img-responsive"></picture>
+</a>
+</div>
+<div class="ccm-block-page-list-page-entry-text">
+<div class="ccm-block-page-list-title">
+<a href="https://exrx.net/Store/Other/SlimGuide" target="_self">Slim Guide Skinfold Caliper &amp; How To Measure Your % Body Fat Manual</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<style>
+
+a.ccm-block-page-list-rss-feed{
+
+    position: absolute;
+
+    top: 0px;
+
+    right: 0px;
+
+}
+
+div.ccm-block-page-list-title {
+
+  font-size: 16px;
+
+  font-weight: normal;
+
+}
+
+div.ccm-block-page-list-title a,div.ccm-block-page-list-title a:hover,div.ccm-block-page-list-title a:visited{ 
+
+ border-bottom:none !important; text-decoration:none !important;}
+
+div.ccm-block-page-list-wrapper {
+
+    position: relative;
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-horizontal {
+
+    display: table;
+
+    width: 100%;
+
+	 padding-right:20px;
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-horizontal,
+
+div.ccm-block-page-list-page-entry {
+
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+div.ccm-block-page-list-page-entry-horizontal div.ccm-block-page-list-page-entry-thumbnail {
+
+    display: table-cell;
+
+    vertical-align: top;
+
+    width: 1px;
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-horizontal div.ccm-block-page-list-page-entry-thumbnail img {
+
+    width: 120px;
+	max-height:180px;
+    max-width: none;
+
+}
+
+
+
+
+
+div.ccm-block-page-list-page-entry-horizontal div.ccm-block-page-list-page-entry-text {
+
+    display: table-cell;
+
+    padding-left: 15px;
+
+    vertical-align: top;
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-text div.ccm-block-page-list-title {
+
+  /*  font-weight: bold;*/
+
+}
+
+
+
+div.ccm-block-page-list-page-entry-read-more {
+
+    margin-top: 20px;
+
+}
+
+
+
+@media only screen and (max-width:992px){
+
+	div.ccm-block-page-list-page-entry-horizontal
+
+	{
+
+		width: 100%;
+
+		float:left;
+
+		max-height:180px;
+
+		
+
+	}
+
+}
+
+@media only screen and (max-width:768px){
+
+	div.ccm-block-page-list-page-entry-horizontal
+
+	{
+
+		width: 50%;
+
+		float:left;
+
+		height:180px;
+
+	}
+
+}
+
+@media only screen and (max-width:600px){
+
+	div.ccm-block-page-list-page-entry-horizontal
+
+	{
+
+		width: 100%;
+
+		height:auto;
+
+	
+
+	}
+
+}
+
+</style>
+<div class="ccm-block-page-list-wrapper">
+<div class="ccm-block-page-list-header">
+<h5>Amazon Store</h5>
+</div>
+<div class="ccm-block-page-list-pages">
+<div class="ccm-block-page-list-page-entry-horizontal">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/AmazonStore/WeightTraining/WeightliftingChainPackage" target="_self">
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/2415/1252/5814/Weightlifting_Chain_Package.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/2415/1252/5814/Weightlifting_Chain_Package.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/2415/1252/5814/Weightlifting_Chain_Package.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/2415/1252/5814/Weightlifting_Chain_Package.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/2415/1252/5814/Weightlifting_Chain_Package.jpg" alt="#" class="img-responsive"></picture>
+</a>
+</div>
+<div class="ccm-block-page-list-page-entry-text">
+<div class="ccm-block-page-list-title">
+<a href="https://exrx.net/AmazonStore/WeightTraining/WeightliftingChainPackage" target="_self">Weightlifting Chain Package</a>
+</div>
+</div>
+</div>
+<div class="ccm-block-page-list-page-entry-horizontal">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/AmazonStore/WeightTraining/GluteKickbackAnkleStrap" target="_self">
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/1715/1210/4799/Glute_Kickback.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/1715/1210/4799/Glute_Kickback.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/1715/1210/4799/Glute_Kickback.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/1715/1210/4799/Glute_Kickback.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/1715/1210/4799/Glute_Kickback.jpg" alt="#" class="img-responsive"></picture>
+</a>
+</div>
+<div class="ccm-block-page-list-page-entry-text">
+<div class="ccm-block-page-list-title">
+<a href="https://exrx.net/AmazonStore/WeightTraining/GluteKickbackAnkleStrap" target="_self">Glute Kickback Ankle Strap</a>
+</div>
+</div>
+</div>
+<div class="ccm-block-page-list-page-entry-horizontal">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/AmazonStore/WeightTraining/NeopreneDippingBelt" target="_self">
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/8915/1981/8759/NeopreneDippingBelt.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/8915/1981/8759/NeopreneDippingBelt.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/8915/1981/8759/NeopreneDippingBelt.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/8915/1981/8759/NeopreneDippingBelt.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/8915/1981/8759/NeopreneDippingBelt.jpg" alt="#" class="img-responsive"></picture>
+</a>
+</div>
+<div class="ccm-block-page-list-page-entry-text">
+<div class="ccm-block-page-list-title">
+<a href="https://exrx.net/AmazonStore/WeightTraining/NeopreneDippingBelt" target="_self">Neoprene Dipping Belt</a>
+</div>
+</div>
+</div>
+<div class="ccm-block-page-list-page-entry-horizontal">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/AmazonStore/WeightTraining/AbRollerWheel" target="_self">
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="/application/files/thumbnails/small/6514/9201/3848/ValeoAbRollerWheel_large.jpg" media="(min-width: 1200px)"><source srcset="/application/files/thumbnails/thumb_640/6514/9201/3848/ValeoAbRollerWheel_large.jpg" media="(min-width: 992px)"><source srcset="/application/files/thumbnails/thumb_480/6514/9201/3848/ValeoAbRollerWheel_large.jpg" media="(min-width: 600px)"><source srcset="/application/files/thumbnails/thumb_320/6514/9201/3848/ValeoAbRollerWheel_large.jpg" media="(min-width: 320px)"><!--[if IE 9]></video><![endif]--><img src="/application/files/6514/9201/3848/ValeoAbRollerWheel_large.jpg" alt="#" class="img-responsive"></picture>
+</a>
+</div>
+<div class="ccm-block-page-list-page-entry-text">
+<div class="ccm-block-page-list-title">
+<a href="https://exrx.net/AmazonStore/WeightTraining/AbRollerWheel" target="_self">Ab Roller Wheel</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="subfooter no-print">
+
+<h3>Related Articles</h3><hr>
+<style>
+.thumbnail-page-list .ccm-block-page-list-page-entry-thumbnail img {/*width:100% !important;*/}
+.thumbnail-page-list .ccm-block-page-list-page-entry-thumbnail a {
+	   display: block;
+       position: relative;
+	       background: none;
+		       padding-top: 0;
+			       border-bottom: none !important;
+    text-decoration: none !important;}
+	
+.ccm-page-list-title a,.ccm-page-list-title a:hover,.ccm-page-list-title a:visited{ border-bottom:none !important; text-decoration:none !important;}
+p.ccm-page-list-title {
+  font-size:16px;
+  font-weight:400;
+  line-height:22px;
+  padding-top:5px;
+}
+@media only screen and (max-width: 992px){
+	p.ccm-page-list-title { height:70px;}
+}
+@media only screen and (max-width: 768px){
+	p.ccm-page-list-title { height:90px ; }
+}
+@media only screen and (max-width: 600px){
+	p.ccm-page-list-title { height:70px;}
+}
+@media only screen and (max-width: 480px){
+	p.ccm-page-list-title { height:90px;}
+}
+@media only screen and (max-width: 320px){
+	.ccm-page-list-title a {font-size:14px;}
+	.ccm-page-list-title {line-height:1;}
+	p.ccm-page-list-title { height:100px ;}
+}
+
+
+</style>
+<script>
+/**!
+ * trunk8 v1.3.2
+ * https://github.com/rviscomi/trunk8
+ *
+ * Copyright 2012 Rick Viscomi
+ * Released under the MIT License.
+ *
+ * Date: October 21, 2012
+ */
+/*Below Javascript truncates the suggested page title, which will be used in pagelist block to show suggested pages in footer*/
+(function($){var methods,utils,SIDES={center:'center',left:'left',right:'right'},WIDTH={auto:'auto'};function trunk8(element){this.$element=$(element);this.original_text=this.$element.html();this.settings=$.extend({},$.fn.trunk8.defaults);}trunk8.prototype.updateSettings=function(options){this.settings=$.extend(this.settings,options);};function truncate(){var data=this.data('trunk8'),settings=data.settings,width=settings.width,side=settings.side,fill=settings.fill,line_height=utils.getLineHeight(this)*settings.lines,str=data.original_text,length=str.length,max_bite='',lower,upper,bite_size,bite;this.html(str);if(width===WIDTH.auto){if(this.height()<=line_height){return;}lower=0;upper=length-1;while(lower<=upper){bite_size=lower+((upper-lower)>>1);bite=utils.eatStr(str,side,length-bite_size,fill);this.html(bite);if(this.height()>line_height){upper=bite_size-1;}else{lower=bite_size+1;max_bite=(max_bite.length>bite.length)?max_bite:bite;}}this.html('');this.html(max_bite);if(settings.tooltip){this.attr('title',str);}}else if(!isNaN(width)){bite_size=length-width;bite=utils.eatStr(str,side,bite_size,fill);this.html(bite);if(settings.tooltip){this.attr('title',str);}}else{$.error('Invalid width "'+width+'".');}}methods={init:function(options){return this.each(function(){var $this=$(this),data=$this.data('trunk8');if(!data){$this.data('trunk8',(data=new trunk8(this)));}data.updateSettings(options);truncate.call($this);});},update:function(new_string){return this.each(function(){var $this=$(this);if(new_string){$this.data('trunk8').original_text=new_string;}truncate.call($this);});},revert:function(){return this.each(function(){var text=$(this).data('trunk8').original_text;$(this).html(text);});},getSettings:function(){return this.get(0).data('trunk8').settings;}};utils={eatStr:function(str,side,bite_size,fill){var length=str.length,key=utils.eatStr.generateKey.apply(null,arguments),half_length,half_bite_size;if(utils.eatStr.cache[key]){return utils.eatStr.cache[key];}if((typeof str!=='string')||(length===0)){$.error('Invalid source string "'+str+'".');}if((bite_size<0)||(bite_size>length)){$.error('Invalid bite size "'+bite_size+'".');}else if(bite_size===0){return str;}if(typeof(fill+'')!=='string'){$.error('Fill unable to be converted to a string.');}switch(side){case SIDES.right:return utils.eatStr.cache[key]=$.trim(str.substr(0,length-bite_size))+fill;case SIDES.left:return utils.eatStr.cache[key]=fill+$.trim(str.substr(bite_size));case SIDES.center:half_length=length>>1;half_bite_size=bite_size>>1;return utils.eatStr.cache[key]=$.trim(utils.eatStr(str.substr(0,length-half_length),SIDES.right,bite_size-half_bite_size,''))+fill+$.trim(utils.eatStr(str.substr(length-half_length),SIDES.left,half_bite_size,''));default:$.error('Invalid side "'+side+'".');}},getLineHeight:function(elem){var $elem=$(elem),float=$elem.css('float'),position=$elem.css('position'),html=$elem.html(),wrapper_id='line-height-test',line_height;if(float!=='none'){$elem.css('float','none');}if(position==='absolute'){$elem.css('position','static');}$elem.html('i').wrap('<div id="'+wrapper_id+'" />');line_height=$('#'+wrapper_id).innerHeight();$elem.html(html).css({'float':float,'position':position}).unwrap();return line_height;}};utils.eatStr.cache={};utils.eatStr.generateKey=function(){return Array.prototype.join.call(arguments,'');};$.fn.trunk8=function(method){if(methods[method]){return methods[method].apply(this,Array.prototype.slice.call(arguments,1));}else if(typeof method==='object'||!method){return methods.init.apply(this,arguments);}else{$.error('Method '+method+' does not exist on jQuery.trunk8');}};$.fn.trunk8.defaults={fill:'&hellip;',lines:1,side:SIDES.right,tooltip:true,width:WIDTH.auto};})(jQuery);
+</script>
+<div class="ccm-block-page-list-wrapper thumbnail-page-list">
+<div class="row">
+<div class="col-sm-2">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/WeightTraining/ChangeWtEx">
+<img class="ccm-output-thumbnail" alt="" src="https://exrx.net/application/files/cache/thumbnails/5913ebf03e5c00cf539a917ec24872ff.jpg" /> </a>
+</div>
+<p class="ccm-page-list-title" id="t8-lines"><a href="https://exrx.net/WeightTraining/ChangeWtEx">Restimulating Progress by Changing Exercises</a></p>
+</div>
+<div class="col-sm-2">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/WeightTraining/Weightlifting/AthleticProgram">
+<img class="ccm-output-thumbnail" alt="" src="https://exrx.net/application/files/cache/thumbnails/f6b9156018db20610f917dd36a0531d9.jpg" /> </a>
+</div>
+<p class="ccm-page-list-title" id="t8-lines"><a href="https://exrx.net/WeightTraining/Weightlifting/AthleticProgram">Weightlifting Program for Athletes</a></p>
+</div>
+<div class="col-sm-2">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/WeightTraining/PowerliftingPrograms">
+<img class="ccm-output-thumbnail" alt="" src="https://exrx.net/application/files/cache/thumbnails/4c7f3de5b5f2db827baa46c52c69df49.jpg" /> </a>
+</div>
+<p class="ccm-page-list-title" id="t8-lines"><a href="https://exrx.net/WeightTraining/PowerliftingPrograms">Powerlifting</a></p>
+</div>
+<div class="col-sm-2">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/WeightTraining/RiskFactors">
+<img class="ccm-output-thumbnail" alt="" src="https://exrx.net/application/files/cache/thumbnails/82d946c133d1d735fa442052bf1f56d0.jpg" /> </a>
+</div>
+<p class="ccm-page-list-title" id="t8-lines"><a href="https://exrx.net/WeightTraining/RiskFactors">Weight Training Injury Risk Factors</a></p>
+</div>
+<div class="col-sm-2">
+<div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/Calculators/WeightPlate">
+<img class="ccm-output-thumbnail" alt="" src="https://exrx.net/application/files/cache/thumbnails/e358fab817cc69f3c98913555c584fce.jpg" /> </a>
+</div>
+<p class="ccm-page-list-title" id="t8-lines"><a href="https://exrx.net/Calculators/WeightPlate">Weight Plate Barbell Racking Calculator</a></p>
+</div>
+<div class="col-sm-2">
+ <div class="ccm-block-page-list-page-entry-thumbnail">
+<a href="https://exrx.net/WeightTraining/Mistakes">
+<img class="ccm-output-thumbnail" alt="" src="https://exrx.net/application/files/cache/thumbnails/6c5e9fd5ed7d8afa2fe25f7470c8dd7e.jpg" /> </a>
+</div>
+<p class="ccm-page-list-title" id="t8-lines"><a href="https://exrx.net/WeightTraining/Mistakes">Most Common Weight Training Mistakes</a></p>
+</div>
+</div>
+</div>
+<script>
+$('.ccm-page-list-title').trunk8({
+  lines: 3
+});
+</script>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="ccm-custom-style-container ccm-custom-style-main-31060 Add-Margin-Top Add-Margin-Bottom">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6329449765532083" data-ad-slot="3609089218" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+</div>
+</div>
+<footer id="site-footer">
+<div class="container ">
+<div class="row">
+<div id="copyright" class="col-xs-12 col-sm-3">
+<p><em>&copy;1999-2018 ExRx.net LLC</em></p>
+</div>
+
+<nav class="col-xs-12 col-sm-9">
+<p style="margin:0px !important"><a href="https://exrx.net/People/Contact">About Us</a> | <a href="https://exrx.net/Notes/Privacy">Privacy</a> | <a href="https://exrx.net/Notes/Legal">Terms</a> | <a href="https://www.facebook.com/pages/ExRxnet/1685475628344232">Facebook</a> | <a href="https://exrx.net/Notes/Feedback">Testimonies</a> | <a data-concrete5-link-type="ajax" href="https://exrx.net/Notes/Archive/Feedback1">Feedback</a> | <a href="https://exrx.net/Store">Store</a></p>
+<div id="amzn-assoc-ad-d457ebf0-12d4-46d4-a3f1-6d2aa75f0d88">&nbsp;</div>
+<script async="" src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=d457ebf0-12d4-46d4-a3f1-6d2aa75f0d88"></script>
+<p></p>
+</nav>
+</div>
+</div>
+</footer>
+</div>
+
+<script src="/packages/fruitful/themes/fruitful/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+// Removed this line on 12 April '18
+//TranslateThis();
+
+$(document).ready(function(){
+$("#mainNav").clone().prependTo($("body")).attr("id","mobileNav").addClass("visible-xs-block visible-sm-block").removeClass("hidden-xs hidden-sm");
+$("#icoMobileNav").click(function(){
+$(".ccm-page, #mobileNav").toggleClass("slideOver");	
+});	
+});//doc.ready
+</script>
+<script src="//rum-static.pingdom.net/pa-5b7d0261c587a2001500014e.js" async></script>
+<script type="text/javascript" src="/updates/concrete5-8.3.2/concrete/js/picturefill.js"></script>
+</body>
+</html>
