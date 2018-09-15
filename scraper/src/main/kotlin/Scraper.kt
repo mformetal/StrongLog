@@ -33,13 +33,23 @@ class Scraper {
                 val primaryMuscle = href.split("/")[4].split(Regex("(?=\\p{Upper})")).first()
                 addProperty("primary", primaryMuscle)
             })
-            add("classification", JsonObject().apply {
-                val classification = document.getElementsContainingOwnText("Classification")
-                if (!classification.isEmpty()) {
-                    addProperty("force", (document.getElementsContainingOwnText("Force:").parents()[1].childNode(3) as Element).text())
-                    addProperty("mechanics", (document.getElementsContainingOwnText("Mechanics:").parents()[1].childNode(3) as Element).text())
-                }
-            })
+            add("classification",
+                    document.getElementsContainingOwnText("Classification")
+                            .takeIf { !it.isEmpty() }
+                            ?.let {
+                                JsonObject().apply {
+                                    addProperty("force", (document.getElementsContainingOwnText("Force:").parents()[1].childNode(3) as Element).text())
+                                    addProperty("mechanics", (document.getElementsContainingOwnText("Mechanics:").parents()[1].childNode(3) as Element).text())
+                                }
+                            })
+            addProperty("gif", document.getElementsByTag("img")
+                    .getOrNull(1)
+                    ?.attr("src")
+                    ?.split("/")
+                    ?.last() ?: "")
+            addProperty("video", document.getElementsByTag("iframe")
+                    .getOrNull(1)
+                    ?.attr("src") ?: "")
         }
     }
 
