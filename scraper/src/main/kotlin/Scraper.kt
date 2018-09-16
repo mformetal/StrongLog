@@ -3,7 +3,9 @@ import com.google.gson.JsonObject
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
+import java.io.BufferedWriter
 import java.io.File
+import java.io.FileWriter
 
 class Scraper {
 
@@ -19,7 +21,18 @@ class Scraper {
                 .map { it.toString() }
                 .also {
                     if (isDebug) {
-                        println(it)
+                        val dir = File("./scraper")
+                        val jsonFile = dir.subfile("exercises.json")
+                        if (jsonFile.exists()) {
+                            BufferedWriter(FileWriter(jsonFile)).apply {
+                                write(it.joinToString())
+                            }
+                        } else {
+                            jsonFile.createNewFile()
+                            BufferedWriter(FileWriter(jsonFile)).apply {
+                                write(it.joinToString())
+                            }
+                        }
                     }
                 }
     }
