@@ -1,5 +1,7 @@
-apply plugin: 'kotlin-platform-common'
-apply plugin: 'kotlinx-serialization'
+plugins {
+    id 'kotlin-platform-common' version '1.2.60'
+}
+
 
 repositories {
     maven { url 'https://kotlin.bintray.com/kotlinx' }
