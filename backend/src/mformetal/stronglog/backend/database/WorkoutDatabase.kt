@@ -2,6 +2,7 @@ package mformetal.stronglog.backend.database
 
 import io.ktor.application.Application
 import mformetal.stronglog.models.Workout
+import mformetal.stronglog.scraper.Scraper
 import org.jetbrains.squash.connection.DatabaseConnection
 import org.jetbrains.squash.connection.transaction
 import org.jetbrains.squash.dialects.h2.H2Connection
@@ -19,10 +20,15 @@ class WorkoutDatabase(application: Application) {
     val db: DatabaseConnection
 
     init {
-        val file = File("/Users/mbpeele/Databases/stronglog.db")
-        db = H2Connection.create(file.canonicalFile.absolutePath).apply {
-            transaction {
-                databaseSchema().create(WorkoutTable)
+        db = H2Connection.createMemoryConnection()
+        db.transaction {
+            databaseSchema().create(WorkoutTable)
+
+            val workouts = Scraper().scrape(false)
+            for (workout in workouts) {
+                insertInto(WorkoutTable).values {
+                    it[title] = workout.title
+                }.execute()
             }
         }
     }

@@ -1,36 +1,31 @@
+package mformetal.stronglog.scraper
 import mformetal.stronglog.models.Classification
 import mformetal.stronglog.models.Muscles
 import mformetal.stronglog.models.Workout
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
-import java.io.BufferedWriter
 import java.io.File
-import java.io.FileWriter
 
 class Scraper {
 
     val root : File
         get() = File("/Users/mbpeele/Databases/exrx.net")
 
-    fun scrape(isDebug : Boolean = false)  {
-        root.subfile("WeightExercises")
+    fun scrape(isDebug : Boolean = false) : List<Workout> {
+        return root.subfile("WeightExercises")
                 .listFiles()
                 .flatMap { it.listFiles().toList() }
                 .map { Jsoup.parse(it, "UTF-8").toWorkout() }
                 .also {
-//                    if (isDebug) {
-//                        val dir = File("./scraper")
-//                        val jsonFile = dir.subfile("exercises.json").apply {
-//                            if (!exists()) createNewFile()
-//                        }
-//
-//                        BufferedWriter(FileWriter(jsonFile)).apply {
-//                            val jsonArray = Gson().toJson(it)
-//                            write(jsonArray)
-//                        }.close()
-//                    }
+                    if (isDebug) {
+                        it.toFile("exercises.json")
+                    }
                 }
+    }
+
+    private fun List<Workout>.toFile(fileName: String) {
+
     }
 
     private fun Document.toWorkout() : Workout {

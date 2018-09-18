@@ -19,6 +19,7 @@ repositories {
 }
 
 dependencies {
+    implementation project(":scraper")
     implementation project(":common-jvm")
 
     implementation "org.jetbrains.squash:squash-h2:0.2.3"
