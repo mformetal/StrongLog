@@ -4,6 +4,10 @@ pluginManagement {
             if (requested.id.id == "kotlin-platform-common") {
                 useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
             }
+
+            if (requested.id.id == "kotlin-platform-jvm") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
         }
     }
 }
@@ -15,4 +19,5 @@ include ':common-test'
 include ':android'
 include ':backend'
 include ':scraper'
+include 'common-jvm'
 

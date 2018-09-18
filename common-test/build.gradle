@@ -1,7 +1,6 @@
 plugins {
-    id 'kotlin-platform-common' version '1.2.60'
+    id 'kotlin-platform-common' version '1.2.61'
 }
-
 
 repositories {
     maven { url 'https://kotlin.bintray.com/kotlinx' }

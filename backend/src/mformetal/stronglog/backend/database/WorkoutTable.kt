@@ -1,10 +1,8 @@
 package mformetal.stronglog.backend.database
 
-import org.jetbrains.squash.definition.TableDefinition
-import org.jetbrains.squash.definition.autoIncrement
-import org.jetbrains.squash.definition.integer
-import org.jetbrains.squash.definition.primaryKey
+import org.jetbrains.squash.definition.*
 
 object WorkoutTable : TableDefinition() {
     val id = integer("id").autoIncrement().primaryKey()
+    val title = text("title")
 }

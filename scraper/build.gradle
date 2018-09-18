@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.2.60'
+    id 'org.jetbrains.kotlin.jvm' version '1.2.61'
     id 'application'
 }
 
@@ -25,10 +25,8 @@ compileTestKotlin {
 sourceSets {
     main.java.srcDirs += "src"
     main.kotlin.srcDirs += "src"
-    main.resources.srcDirs += "resources"
     test.java.srcDirs += "test"
     test.kotlin.srcDirs += "test"
-    test.resources.srcDirs += "testResources"
 }
 
 mainClassName = 'MainKt'

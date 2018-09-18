@@ -1,4 +1,4 @@
-import mformetal.stronglog.models.Muscles
+package mformetal.stronglog.models
 
 class Workout(val title: String,
               val muscles: Muscles)

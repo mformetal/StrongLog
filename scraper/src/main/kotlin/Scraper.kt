@@ -1,5 +1,8 @@
+import com.google.gson.Gson
+import com.google.gson.JsonArray
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
+import com.google.gson.reflect.TypeToken
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
@@ -12,27 +15,29 @@ class Scraper {
     val root : File
         get() = (javaClass.classLoader.getResource("exrx.net").file).toFile()
 
-    fun scrape(isDebug : Boolean = false) : List<String> {
-        return root.subfile("WeightExercises")
+    fun scrape(isDebug : Boolean = false)  {
+        root.subfile("WeightExercises")
                 .listFiles()
                 .flatMap { it.listFiles().toList() }
                 .map { Jsoup.parse(it, "UTF-8").toWorkout() }
-                .toList()
-                .map { it.toString() }
+                .run {
+                    JsonArray().apply {
+                        this@run.forEach {
+                            add(it)
+                        }
+                    }
+                }
                 .also {
                     if (isDebug) {
                         val dir = File("./scraper")
-                        val jsonFile = dir.subfile("exercises.json")
-                        if (jsonFile.exists()) {
-                            BufferedWriter(FileWriter(jsonFile)).apply {
-                                write(it.joinToString())
-                            }
-                        } else {
-                            jsonFile.createNewFile()
-                            BufferedWriter(FileWriter(jsonFile)).apply {
-                                write(it.joinToString())
-                            }
+                        val jsonFile = dir.subfile("exercises.json").apply {
+                            if (!exists()) createNewFile()
                         }
+
+                        BufferedWriter(FileWriter(jsonFile)).apply {
+                            val jsonArray = Gson().toJson(it)
+                            write(jsonArray)
+                        }.close()
                     }
                 }
     }
