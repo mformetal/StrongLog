@@ -1,7 +1,6 @@
 ext.kotlin_version = '1.2.61'
 ext.coroutines_version = '0.25.0'
 ext.ktor_version = '0.9.4'
-ext.moshi_version = '1.6.0'
 
 allprojects {
     buildscript {
