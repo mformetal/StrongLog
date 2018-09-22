@@ -13,11 +13,7 @@ pluginManagement {
 }
 rootProject.name = 'stronglog'
 
-include ':common-client'
-include ':common-models'
-include ':common-test'
-include ':android'
 include ':backend'
 include ':scraper'
-include 'common-jvm'
+include ':common-jvm'
 
