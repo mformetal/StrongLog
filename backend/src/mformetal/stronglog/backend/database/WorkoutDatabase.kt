@@ -21,10 +21,9 @@ import java.io.File
 
 class WorkoutDatabase(application: Application) {
 
-    val db: DatabaseConnection
+    val db: DatabaseConnection = H2Connection.createMemoryConnection()
 
     init {
-        db = H2Connection.createMemoryConnection()
         db.transaction {
             databaseSchema().create(WorkoutTable)
 

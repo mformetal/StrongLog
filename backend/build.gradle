@@ -43,4 +43,4 @@ kotlin {
     }
 }
 
-mainClassName = 'mformetal.moddly.backend.ApplicationKt'
+mainClassName = 'mformetal.stronglog.backend.ApplicationKt'
