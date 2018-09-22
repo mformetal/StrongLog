@@ -1,4 +1,6 @@
-ext.kotlin_version = '1.2.60'
+ext.kotlin_version = '1.2.61'
+ext.coroutines_version = '0.25.0'
+ext.ktor_version = '0.9.4'
 
 allprojects {
     buildscript {
@@ -6,12 +8,23 @@ allprojects {
             google()
             jcenter()
             mavenCentral()
+            maven { url "https://kotlin.bintray.com/kotlinx" }
         }
 
         dependencies {
             classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
             classpath 'com.android.tools.build:gradle:3.1.4'
+
             classpath 'com.google.gms:google-services:3.2.0'
         }
+    }
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://dl.bintray.com/kotlin/ktor' }
+        maven { url "https://kotlin.bintray.com/kotlinx" }
     }
 }

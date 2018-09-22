@@ -1,0 +1,46 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.2.61'
+    id 'application'
+}
+
+sourceSets {
+    main.java.srcDirs += "src"
+    main.kotlin.srcDirs += "src"
+    main.resources.srcDirs += "resources"
+    test.java.srcDirs += "test"
+    test.kotlin.srcDirs += "test"
+    test.resources.srcDirs += "testResources"
+}
+
+repositories {
+    jcenter()
+    maven { url "https://dl.bintray.com/kotlin/squash" }
+    maven { url "https://kotlin.bintray.com/ktor" }
+}
+
+dependencies {
+    implementation project(":scraper")
+    implementation project(":common-jvm")
+
+    implementation "org.jetbrains.squash:squash-h2:0.2.3"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation "io.ktor:ktor-server-netty:$ktor_version"
+    implementation "io.ktor:ktor-gson:$ktor_version"
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+
+    testImplementation "io.ktor:ktor-server-test-host:$ktor_version"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+
+mainClassName = 'mformetal.stronglog.backend.ApplicationKt'

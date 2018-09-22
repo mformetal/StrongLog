@@ -1,7 +1,6 @@
-package mformetal.moddly.android
+package mformetal.stronglog.android
 
 import android.app.Application
-import mformetal.moddly.common.ModAPI
 
 class App : Application() {
 
